@@ -555,3 +555,96 @@ body.has-art-bg::after {
   font-weight: 600;
   color: #4caf50;
 }
+
+
+/* Arcane Archive detail-page refresh */
+body.has-art-bg::before,
+body.has-art-bg::after,
+.particles { display: none !important; }
+
+body > header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  max-width: 1400px;
+  min-height: 0;
+  margin: 20px auto 26px;
+  padding: 24px 30px;
+}
+
+.detail-header-copy { display: flex; align-items: baseline; gap: 14px; }
+.detail-header-copy .eyebrow { margin: 0; }
+.detail-header-copy h1 { margin: 0; font-size: 1.6rem; }
+.detail-header-copy a { color: inherit; text-decoration: none; }
+.back-button {
+  position: static;
+  flex: 0 0 auto;
+  padding: 9px 13px;
+  color: var(--accent);
+  border: 1px solid rgba(201, 160, 111, .28);
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.detail-content { grid-template-columns: minmax(320px, 430px) minmax(0, 1fr); gap: 44px; }
+.detail-info { padding-top: 8px; }
+.card-title { align-items: flex-start; border-bottom-color: var(--accent); }
+.card-title h2 {
+  max-width: 820px;
+  color: var(--text-primary);
+  font: 600 clamp(1.8rem, 3vw, 2.5rem)/1.08 Georgia, "Times New Roman", serif;
+  overflow-wrap: anywhere;
+}
+.collection-info,
+.oracle-box,
+.stats-box,
+.meta-info,
+.legality-item { background: rgba(37, 31, 39, .9); border-color: rgba(201, 160, 111, .2); }
+.collection-info h3,
+.legality-section h3,
+.power-toughness,
+.loyalty,
+.upgrade-price { color: var(--accent); }
+.oracle-box { border-left-color: var(--accent); }
+
+.face-switcher {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 14px;
+}
+.face-switcher button {
+  padding: 10px 12px;
+  color: var(--text-secondary);
+  background: rgba(37, 31, 39, .9);
+  border: 1px solid rgba(201, 160, 111, .22);
+  border-radius: 8px;
+  cursor: pointer;
+}
+.face-switcher button.active,
+.face-switcher button:hover,
+.face-switcher button:focus-visible {
+  color: #211a1d;
+  background: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+
+.legality-grid { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.legality-item { gap: 12px; overflow: visible; }
+.legality-item span { overflow: visible; text-overflow: clip; white-space: normal; }
+.format-name { flex: 1; line-height: 1.2; }
+.status-badge { flex: 0 0 auto; background: rgba(201, 160, 111, .18) !important; color: var(--accent) !important; }
+.legality-item.legal { border-left-color: var(--accent); }
+
+@media (max-width: 1024px) {
+  .detail-content { grid-template-columns: 1fr; }
+  .detail-left { max-width: 480px; margin: 0 auto; }
+}
+@media (max-width: 650px) {
+  body > header { align-items: flex-start; flex-direction: column; margin: 8px; padding: 20px; }
+  .detail-header-copy { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .detail-container { padding: 12px; }
+  .face-switcher { grid-template-columns: 1fr; }
+  .legality-grid { grid-template-columns: 1fr; }
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Collection Explorer - MTG Collection Viewer</title>
+  <title>Arcane Archive — MTG Collection Dashboard</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nouislider@15/dist/nouislider.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -17,13 +17,13 @@
       <div class="menu-section">
         <div class="menu-section-title">Views</div>
         <a href="index.html" class="menu-item active">⊞ Collection Explorer</a>
-        <a href="binder.html" class="menu-item">📖 Binder View</a>
-        <a href="carousel.html" class="menu-item">🎠 Carousel View</a>
-        <a href="timeline.html" class="menu-item">📅 Timeline View</a>
       </div>
       <div class="menu-section">
         <div class="menu-section-title">Tools</div>
         <a href="deck-checker.html" class="menu-item">🔍 Deck Checker</a>
+        <a href="commander-builder.html" class="menu-item">Commander Builder Helper</a>
+        <a href="commander-rankings.html" class="menu-item">Owned Commander Rankings</a>
+        <a href="decks.html" class="menu-item">My Commander Decks</a>
         <a href="trade-calculator.html" class="menu-item">⚖️ Trade Calculator</a>
         <a href="trading-binder.html" class="menu-item">📖 Trading Binder</a>
         <a href="wishlist.html" class="menu-item">💫 Wishlist</a>
@@ -53,16 +53,36 @@
   </div>
 
   <header>
-    <h1>MTG Collection Viewer</h1>
+    <p class="eyebrow">PERSONAL COLLECTION · LIVE SCRYFALL ESTIMATES</p>
+    <h1>Arcane Archive</h1>
+    <p class="header-copy">A quiet archive of every printing you own, valued against today’s market.</p>
     <div class="stats">
-      <span>Total Cards: <strong id="total-cards">0</strong></span>
-      <span>Total Value: <strong id="total-value">$0.00</strong></span>
-      <select id="price-source" class="price-source-select">
-        <option value="manabox">Manabox Prices</option>
-        <option value="scryfall">Scryfall Prices (USD)</option>
-      </select>
+      <span>Cards: <strong id="total-cards">0</strong></span>
+      <span>Current market estimate: <strong id="total-value">Loading…</strong></span>
+      <span class="price-note">Scryfall USD · converted to AUD</span>
     </div>
   </header>
+  <div id="collection-status" class="collection-status" role="status">Loading your collection…</div>
+  <section id="summary-dashboard" class="summary-dashboard" aria-label="Collection summary"></section>
+  <section class="quick-actions" aria-label="Collection views">
+    <button data-preset="all" class="active">All cards</button>
+    <button data-preset="recent">Recently added</button>
+    <button data-preset="duplicates">Duplicates</button>
+    <button data-preset="valuable">High value</button>
+    <button data-preset="unassigned">No binder</button>
+    <button data-preset="foil">Foils</button>
+    <button data-preset="mythic">Mythics</button>
+    <button data-preset="orcs">Orcs</button>
+    <button data-preset="zombies">Zombies</button>
+    <button data-preset="vampires">Vampires</button>
+    <button data-preset="humans">Humans</button>
+    <button data-preset="lotr">Lord of the Rings</button>
+    <button data-preset="marvel">Marvel</button>
+    <button data-preset="spiderman">Spider-Man</button>
+    <button data-preset="avatar">Avatar</button>
+    <button data-preset="strixhaven">Strixhaven</button>
+    <button data-preset="staples">Commander staples</button>
+  </section>
 
   <div class="search-hero">
     <div class="search-wrapper autocomplete-wrapper">
@@ -97,6 +117,11 @@
         <option value="foil">Foil</option>
         <option value="etched">Etched</option>
       </select>
+      <select id="binder-filter"><option value="">All Binders</option></select>
+      <select id="language-filter"><option value="">All Languages</option></select>
+      <select id="condition-filter"><option value="">All Conditions</option></select>
+      <label class="compact-input">Qty ≥ <input id="quantity-filter" type="number" min="1" value="1"></label>
+      <label class="compact-input">Added after <input id="date-filter" type="date"></label>
       <select id="type-filter">
         <option value="">All Types</option>
         <option value="Creature">Creature</option>
@@ -187,6 +212,19 @@
     </div>
   </div>
 
+  <section class="insight-grid" aria-label="Collection highlights">
+    <article><h2>Most valuable cards</h2><div id="valuable-cards" class="rank-list"></div></article>
+    <article><h2>Most valuable sets</h2><div id="valuable-sets" class="rank-list"></div></article>
+    <article><h2>Recently added</h2><div id="recent-cards" class="rank-list"></div></article>
+    <article><h2>Franchises & universes</h2><div id="franchise-summary" class="rank-list"></div></article>
+  </section>
+
+  <details class="settings-panel">
+    <summary>Privacy & display settings</summary>
+    <p class="privacy-warning">These settings only hide information in the interface. Anything committed to a public repository, including CSV and JSON files, can still be downloaded.</p>
+    <div id="privacy-settings" class="settings-grid"></div>
+  </details>
+
   <div class="collapsible-section">
     <button type="button" class="section-toggle" id="achievements-toggle">🏆 Achievements <span class="toggle-icon">▶</span></button>
     <div id="achievements" class="achievements collapsed"></div>
@@ -195,7 +233,9 @@
   <div id="collection" class="collection"></div>
   <button type="button" id="load-more" class="load-more-btn" style="display:none">Load More Cards</button>
 
+  <script src="js/collection-core.js"></script>
   <script src="js/shared.js"></script>
   <script src="js/grid.js"></script>
+  <script src="js/dashboard.js"></script>
 </body>
 </html>
