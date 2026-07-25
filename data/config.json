@@ -7,7 +7,7 @@
     "Marvel": ["SPM", "FIN"],
     "Spider-Man": ["SPM"],
     "Avatar": ["TLA", "TLE"],
-    "Strixhaven": ["STX", "STA", "C21"]
+    "Strixhaven": ["STX", "STA", "C21", "SOS", "SOA", "SOC"]
   },
   "privacyDefaults": {
     "hidePurchasePrices": false,
