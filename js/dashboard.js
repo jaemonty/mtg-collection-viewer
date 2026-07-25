@@ -4,7 +4,7 @@ const DASHBOARD_CONFIG = {
     'Marvel': ['SPM', 'FIN'],
     'Spider-Man': ['SPM'],
     'Avatar': ['TLA', 'TLE'],
-    'Strixhaven': ['STX', 'STA', 'C21']
+    'Strixhaven': ['STX', 'STA', 'C21', 'SOS', 'SOA', 'SOC']
   },
   commanderStaples: ['Sol Ring', 'Arcane Signet', 'Command Tower', 'Swords to Plowshares', 'Path to Exile',
     'Counterspell', 'Cyclonic Rift', 'Rhystic Study', 'Smothering Tithe', 'Lightning Greaves', 'Swiftfoot Boots']
