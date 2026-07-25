@@ -1,1 +1,5 @@
-["hosts-of-mordor.json","eternal-might.json","blood-rites.json","food-and-fellowship.json"]
+[
+  "blood-rites.json",
+  "eternal-might.json",
+  "hosts-of-mordor.json"
+]

@@ -11,7 +11,7 @@ const DASHBOARD_CONFIG = {
 };
 
 const privacyDefaults = {
-  hidePurchasePrices: false, hideTotalValue: false, hideBinderNames: false,
+  hideTotalValue: false, hideBinderNames: false,
   disableTradeBinder: false, disableWishlist: false, disableDeckPages: false,
   disableTilt: false, disableFoilEffects: false
 };
@@ -28,21 +28,20 @@ function dashboardMoney(value, currency) {
 }
 
 function currentMarketPrice(card) {
-  return window.MTGCollectionCore.marketPrice(card);
+  return window.MTGCollectionCore.marketPrice(card) * getUsdToAudRate();
 }
 
 function renderSummaryDashboard() {
   const target = document.getElementById('summary-dashboard');
   if (!target) return;
   const totals = window.MTGCollectionCore.calculateTotals(collection.map(card => ({ ...card, currentPrice: currentMarketPrice(card) })));
-  const currency = collection.find(card => card.currency)?.currency || 'AUD';
   const settings = dashboardSettings();
   const metrics = [
     ['Unique cards', totals.uniqueCards, 'Oracle card names'],
     ['Physical cards', totals.quantity, `${totals.uniqueVersions} owned versions`],
-    ['Estimated value', settings.hideTotalValue ? 'Hidden' : dashboardMoney(totals.estimatedValue, currency), 'Current estimate where available'],
-    ['Purchase cost', settings.hidePurchasePrices ? 'Hidden' : dashboardMoney(totals.purchaseCost, currency), 'Recorded cost basis'],
-    ['Est. gain / loss', settings.hideTotalValue || settings.hidePurchasePrices ? 'Hidden' : totals.gainLoss === null ? 'Unavailable' : dashboardMoney(totals.gainLoss, currency), totals.gainLoss === null ? 'Load Scryfall prices first' : 'Estimate minus purchase cost'],
+    ['Current value', settings.hideTotalValue ? 'Hidden' : dashboardMoney(totals.estimatedValue, 'AUD'), 'Scryfall USD converted to AUD'],
+    ['Priced copies', totals.marketPricedQuantity, 'Copies with a Scryfall price'],
+    ['Printings', totals.uniqueVersions, 'Distinct owned versions'],
     ['Foils', totals.foils, 'Foil and etched copies'],
     ['Sets', totals.sets, 'Sets represented'],
     ['Binders', settings.hideBinderNames ? 'Hidden' : totals.binders, 'Named storage locations']
@@ -53,7 +52,6 @@ function renderSummaryDashboard() {
 }
 
 function renderHighlights() {
-  const currency = collection.find(card => card.currency)?.currency || 'AUD';
   const valueRows = [...collection].sort((a, b) => currentMarketPrice(b) * b.quantity - currentMarketPrice(a) * a.quantity).slice(0, 5);
   const bySet = {};
   collection.forEach(card => {
@@ -68,9 +66,9 @@ function renderHighlights() {
     const el = document.getElementById(id);
     if (el) el.innerHTML = rows.length ? rows.map(render).join('') : '<p class="empty-note">No matching data in this CSV.</p>';
   };
-  write('valuable-cards', valueRows, card => `<a href="detail.html?id=${encodeURIComponent(card.scryfallId)}"><span>${card.name}</span><strong>${dashboardMoney(currentMarketPrice(card) * card.quantity, currency)}</strong></a>`);
-  write('valuable-sets', setRows, ([name, value]) => `<div><span>${name}</span><strong>${dashboardMoney(value, currency)}</strong></div>`);
-  write('recent-cards', recentRows, card => `<a href="detail.html?id=${encodeURIComponent(card.scryfallId)}"><span>${card.name}</span><strong>${card.addedDate}</strong></a>`);
+  write('valuable-cards', valueRows, card => `<a href="detail.html?id=${encodeURIComponent(card.scryfallId)}"><span>${card.name}</span><strong>${dashboardMoney(currentMarketPrice(card) * card.quantity, 'AUD')}</strong></a>`);
+  write('valuable-sets', setRows, ([name, value]) => `<div><span>${name}</span><strong>${dashboardMoney(value, 'AUD')}</strong></div>`);
+  write('recent-cards', recentRows, card => `<a href="detail.html?id=${encodeURIComponent(card.scryfallId)}"><span>${card.name}</span><strong>${new Intl.DateTimeFormat('en-AU', { dateStyle: 'medium' }).format(new Date(card.addedDate))}</strong></a>`);
   write('franchise-summary', franchiseRows, ([name, count]) => `<div><span>${name}</span><strong>${count}</strong></div>`);
 }
 
@@ -119,7 +117,7 @@ function renderSettings() {
   if (!target) return;
   const settings = dashboardSettings();
   const labels = {
-    hidePurchasePrices: 'Hide purchase prices', hideTotalValue: 'Hide total collection value',
+    hideTotalValue: 'Hide current collection value',
     hideBinderNames: 'Hide binder names', disableTradeBinder: 'Disable trade binder',
     disableWishlist: 'Disable wishlist', disableDeckPages: 'Disable public deck pages',
     disableTilt: 'Disable card tilt', disableFoilEffects: 'Disable foil effects'
@@ -149,9 +147,17 @@ const originalDashboardLoaded = onCollectionLoaded;
 onCollectionLoaded = async function () {
   await originalDashboardLoaded();
   populateDashboardFilters();
+  await loadAudExchangeRate();
+  showCollectionStatus('loading', 'Loading current Scryfall market prices…');
+  await loadFullCardData((done, total) => {
+    showCollectionStatus('loading', `Loading current Scryfall market prices… ${Math.round(done / total * 100)}%`);
+  });
+  applyFilters();
   renderSummaryDashboard();
   renderHighlights();
   renderSettings();
+  const rateDate = localStorage.getItem('mtg-usd-aud-date');
+  showCollectionStatus('success', `Collection ready · Scryfall USD prices converted to AUD${rateDate ? ` at the ${rateDate} reference rate` : ''}.`);
 };
 
 const originalDashboardApply = applyFilters;

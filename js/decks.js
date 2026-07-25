@@ -1,10 +1,27 @@
 let deckCollection = [], activeDeck = null, deckMetadata = new Map();
+async function hydrateDeckMetadata(status) {
+  const ids = [...new Set(deckCollection.map(card => card.scryfallId).filter(Boolean))];
+  for (let index = 0; index < ids.length; index += 75) {
+    const batch = ids.slice(index, index + 75);
+    const response = await fetch('https://api.scryfall.com/cards/collection', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({identifiers: batch.map(id => ({id}))})
+    });
+    if (!response.ok) throw new Error(`Scryfall metadata returned ${response.status}.`);
+    const payload = await response.json();
+    payload.data.forEach(card => deckMetadata.set(card.id, card));
+    status.textContent = `Loading deck metadata… ${Math.min(index + 75, ids.length)} / ${ids.length}`;
+    if (index + 75 < ids.length) await new Promise(resolve => setTimeout(resolve, 100));
+  }
+}
+
 async function initDecks() {
   const status = document.getElementById('decks-status');
   try {
     const [csvResponse, indexResponse] = await Promise.all([fetch('data/Collection.csv'), fetch('data/decks/index.json')]);
     if (!csvResponse.ok || !indexResponse.ok) throw new Error('Collection or deck index is missing.');
     deckCollection = MTGCollectionCore.parseManaBoxCSV(await csvResponse.text(), {defaultCurrency:'AUD'}).cards;
+    await hydrateDeckMetadata(status);
     const files = await indexResponse.json();
     const decks = await Promise.all(files.map(file => fetch(`data/decks/${file}`).then(response => response.json())));
     const tabs = document.getElementById('deck-tabs');

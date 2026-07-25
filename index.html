@@ -17,14 +17,12 @@
       <div class="menu-section">
         <div class="menu-section-title">Views</div>
         <a href="index.html" class="menu-item active">⊞ Collection Explorer</a>
-        <a href="binder.html" class="menu-item">📖 Binder View</a>
-        <a href="carousel.html" class="menu-item">🎠 Carousel View</a>
-        <a href="timeline.html" class="menu-item">📅 Timeline View</a>
       </div>
       <div class="menu-section">
         <div class="menu-section-title">Tools</div>
         <a href="deck-checker.html" class="menu-item">🔍 Deck Checker</a>
         <a href="commander-builder.html" class="menu-item">Commander Builder Helper</a>
+        <a href="commander-rankings.html" class="menu-item">Owned Commander Rankings</a>
         <a href="decks.html" class="menu-item">My Commander Decks</a>
         <a href="trade-calculator.html" class="menu-item">⚖️ Trade Calculator</a>
         <a href="trading-binder.html" class="menu-item">📖 Trading Binder</a>
@@ -55,16 +53,13 @@
   </div>
 
   <header>
-    <p class="eyebrow">PERSONAL COLLECTION · MANABOX + SCRYFALL</p>
+    <p class="eyebrow">PERSONAL COLLECTION · LIVE SCRYFALL ESTIMATES</p>
     <h1>Arcane Archive</h1>
-    <p class="header-copy">Browse every printing, understand the collection, and build with what you own.</p>
+    <p class="header-copy">A quiet archive of every printing you own, valued against today’s market.</p>
     <div class="stats">
-      <span>Total Cards: <strong id="total-cards">0</strong></span>
-      <span>Selected value source: <strong id="total-value">$0.00</strong></span>
-      <select id="price-source" class="price-source-select">
-        <option value="manabox">ManaBox purchase prices</option>
-        <option value="scryfall">Scryfall Prices (USD)</option>
-      </select>
+      <span>Cards: <strong id="total-cards">0</strong></span>
+      <span>Current market estimate: <strong id="total-value">Loading…</strong></span>
+      <span class="price-note">Scryfall USD · converted to AUD</span>
     </div>
   </header>
   <div id="collection-status" class="collection-status" role="status">Loading your collection…</div>

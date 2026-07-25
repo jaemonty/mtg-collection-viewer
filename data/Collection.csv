@@ -455,124 +455,124 @@ strixhaven,binder,Startled Relic Sloth,SOS,Secrets of Strixhaven,233,normal,unco
 strixhaven,binder,Dig Site Inventory,SOS,Secrets of Strixhaven,10,normal,common,1,112707,e52464ee-df8b-41ec-af93-4b0eb004383e,0.2,false,false,near_mint,en,AUD,2026-07-15T05:19:27.820Z
 strixhaven,binder,Send in the Pest,SOS,Secrets of Strixhaven,100,normal,common,1,112576,283b508b-89f0-4c23-9686-b049e402b73c,0.32,false,false,near_mint,en,AUD,2026-07-15T05:19:27.818Z
 strixhaven,binder,Run Behind,SOS,Secrets of Strixhaven,66,normal,common,1,112601,40ecc34b-4cd0-4998-bbf4-7faa6fd3d7e0,0.09,false,false,near_mint,en,AUD,2026-07-15T05:19:27.817Z
-marvel,binder,Soldier,TMSH,Marvel Super Heroes Tokens,3,normal,common,3,114590,ecd686bf-d14b-491c-b0c5-88fc8f0472f9,,false,false,near_mint,en,AUD,2026-07-20T12:48:05.513Z
+marvel,binder,Soldier,TMSH,Marvel Super Heroes Tokens,3,foil,common,3,114590,ecd686bf-d14b-491c-b0c5-88fc8f0472f9,,false,false,near_mint,en,AUD,2026-07-20T12:48:05.513Z
 marvel,binder,Doctor Doom,MSH,Marvel Super Heroes,336,foil,mythic,1,113253,be8177e1-b0b4-4c8f-90b9-034313c7b271,30.79,false,false,near_mint,en,AUD,2026-07-20T12:48:05.512Z
 marvel,binder,Beast Within,MAR,Marvel Universe,75,normal,mythic,1,113312,b6b6c66f-e3e0-4904-ae41-2ecc786f70c5,2.02,false,false,near_mint,en,AUD,2026-07-20T12:48:05.511Z
 marvel,binder,"Elektra, Daughter of the Hand",MSH,Marvel Super Heroes,326,normal,rare,1,113130,0d855376-c5ff-4981-9605-6c16f213a857,1.83,false,false,near_mint,en,AUD,2026-07-20T12:48:05.510Z
 marvel,binder,"Black Widow, Agile Avenger",MSC,Marvel Super Heroes Commander,395,normal,rare,1,114362,0b165b56-ad86-4d8c-91e2-1464b2ac5c6d,31.77,false,false,near_mint,en,AUD,2026-07-20T12:48:05.509Z
 marvel,binder,"Wolverine, Claws Out",MSC,Marvel Super Heroes Commander,737,foil,rare,1,113705,534a044c-a4a9-478c-ad74-060185b3cb01,23.92,false,false,near_mint,en,AUD,2026-07-20T12:48:05.508Z
-marvel,binder,Forest,MSH,Marvel Super Heroes,286,normal,common,3,113176,47eb96ec-a417-4dbc-82d2-6317372dda11,0.32,false,false,near_mint,en,AUD,2026-07-20T12:48:05.507Z
-marvel,binder,"Human Torch, Johnny Storm",MSH,Marvel Super Heroes,321,normal,uncommon,2,113155,2fa8010c-3f88-4fbe-880e-7facfea06893,0.52,false,false,near_mint,en,AUD,2026-07-20T12:48:05.506Z
-marvel,binder,Living Lies of Loki,MSC,Marvel Super Heroes Commander,627,normal,uncommon,1,113526,07e81366-e42d-4a94-9ea2-598c4b4b63ca,0.69,false,false,near_mint,en,AUD,2026-07-20T12:48:05.505Z
-marvel,binder,Venomized Cat,SPM,Marvel's Spider-Man,72,normal,common,1,108527,6330f3e9-e031-4d55-b5d8-536c16bba063,0.22,false,false,near_mint,en,AUD,2026-07-20T12:48:05.504Z
-marvel,binder,Quinjet Technician,MSC,Marvel Super Heroes Commander,703,normal,common,1,113903,a65b9024-fcca-497d-afb9-5ce9466d796f,0.4,false,false,near_mint,en,AUD,2026-07-20T12:48:05.503Z
-marvel,binder,"Beast, Erudite Aerialist",MSH,Marvel Super Heroes,206,normal,uncommon,1,113906,a92a95d2-9529-417a-b7d5-b4244d7fdca7,0.23,false,false,near_mint,en,AUD,2026-07-20T12:48:05.502Z
-marvel,binder,"Colleen Wing, Street Samurai",MSH,Marvel Super Heroes,13,normal,uncommon,1,113417,8bffc505-608e-4a5b-9ed9-2321e4cab484,0.3,false,false,near_mint,en,AUD,2026-07-20T12:48:05.501Z
-marvel,binder,Kree Commandos,MSH,Marvel Super Heroes,19,normal,common,2,113651,401f9ccf-f30c-4777-9a5b-4c340e724fff,0.06,false,false,near_mint,en,AUD,2026-07-20T12:48:05.500Z
-marvel,binder,S.H.I.E.L.D. Spy Kit,MSH,Marvel Super Heroes,36,normal,common,1,113677,4938e23f-b5da-493b-9904-af61a3733ba0,0.27,false,false,near_mint,en,AUD,2026-07-20T12:48:05.499Z
-marvel,binder,Aerial Doombot,MSH,Marvel Super Heroes,43,normal,common,1,114054,e727ec1c-dc3b-4f1a-8a62-18549f118b89,0.17,false,false,near_mint,en,AUD,2026-07-20T12:48:05.498Z
+marvel,binder,Forest,MSH,Marvel Super Heroes,286,foil,common,3,113176,47eb96ec-a417-4dbc-82d2-6317372dda11,0.32,false,false,near_mint,en,AUD,2026-07-20T12:48:05.507Z
+marvel,binder,"Human Torch, Johnny Storm",MSH,Marvel Super Heroes,321,foil,uncommon,2,113155,2fa8010c-3f88-4fbe-880e-7facfea06893,0.52,false,false,near_mint,en,AUD,2026-07-20T12:48:05.506Z
+marvel,binder,Living Lies of Loki,MSC,Marvel Super Heroes Commander,627,foil,uncommon,1,113526,07e81366-e42d-4a94-9ea2-598c4b4b63ca,0.69,false,false,near_mint,en,AUD,2026-07-20T12:48:05.505Z
+marvel,binder,Venomized Cat,SPM,Marvel's Spider-Man,72,foil,common,1,108527,6330f3e9-e031-4d55-b5d8-536c16bba063,0.22,false,false,near_mint,en,AUD,2026-07-20T12:48:05.504Z
+marvel,binder,Quinjet Technician,MSC,Marvel Super Heroes Commander,703,foil,common,1,113903,a65b9024-fcca-497d-afb9-5ce9466d796f,0.4,false,false,near_mint,en,AUD,2026-07-20T12:48:05.503Z
+marvel,binder,"Beast, Erudite Aerialist",MSH,Marvel Super Heroes,206,foil,uncommon,1,113906,a92a95d2-9529-417a-b7d5-b4244d7fdca7,0.23,false,false,near_mint,en,AUD,2026-07-20T12:48:05.502Z
+marvel,binder,"Colleen Wing, Street Samurai",MSH,Marvel Super Heroes,13,foil,uncommon,1,113417,8bffc505-608e-4a5b-9ed9-2321e4cab484,0.3,false,false,near_mint,en,AUD,2026-07-20T12:48:05.501Z
+marvel,binder,Kree Commandos,MSH,Marvel Super Heroes,19,foil,common,2,113651,401f9ccf-f30c-4777-9a5b-4c340e724fff,0.06,false,false,near_mint,en,AUD,2026-07-20T12:48:05.500Z
+marvel,binder,S.H.I.E.L.D. Spy Kit,MSH,Marvel Super Heroes,36,foil,common,1,113677,4938e23f-b5da-493b-9904-af61a3733ba0,0.27,false,false,near_mint,en,AUD,2026-07-20T12:48:05.499Z
+marvel,binder,Aerial Doombot,MSH,Marvel Super Heroes,43,foil,common,1,114054,e727ec1c-dc3b-4f1a-8a62-18549f118b89,0.17,false,false,near_mint,en,AUD,2026-07-20T12:48:05.498Z
 marvel,binder,Fury of the Horde,MAR,Marvel Universe,71,normal,mythic,1,114197,5eaaca68-47e1-49f8-bf2e-c0eaad721e86,3.83,false,false,near_mint,en,AUD,2026-07-20T12:55:06.965Z
 marvel,binder,"Winter Soldier, Icy Assassin",MSH,Marvel Super Heroes,377,normal,rare,1,113371,76c05333-0e02-4173-b8b4-cb0da3b99a64,1.81,false,false,near_mint,en,AUD,2026-07-20T12:55:06.964Z
-marvel,binder,Gift of Immortality,MSC,Marvel Super Heroes Commander,134,normal,rare,1,113682,4ae22015-073a-4666-9e3b-15dcf61f50ce,0.54,false,false,near_mint,en,AUD,2026-07-20T12:55:06.963Z
-marvel,binder,The Super Hero Civil War,MSH,Marvel Super Heroes,231,normal,rare,1,113345,fbd1f333-5640-41f8-b9dd-1c322ac7724a,0.39,false,false,near_mint,en,AUD,2026-07-20T12:55:06.962Z
-marvel,binder,Swamp,MSH,Marvel Super Heroes,282,normal,common,1,113203,69eee76e-5714-4503-8170-3f551410abec,0.29,false,false,near_mint,en,AUD,2026-07-20T12:55:06.961Z
-marvel,binder,Origin of Captain America,MSC,Marvel Super Heroes Commander,605,normal,uncommon,1,113752,649ac84b-be8e-4f00-9603-815ee2b11d00,0.85,false,false,near_mint,en,AUD,2026-07-20T12:55:06.959Z
-marvel,binder,Wild Pack Squad,SPM,Marvel's Spider-Man,23,normal,common,1,107647,7b0eda7c-e44d-4d9b-9042-4a1eb8c4ed4a,0.1,false,false,near_mint,en,AUD,2026-07-20T12:55:06.958Z
-marvel,binder,Minion Missile,MSC,Marvel Super Heroes Commander,663,normal,common,1,113993,cc8567c6-f409-44d4-a19c-480c6e4abe56,0.39,false,false,near_mint,en,AUD,2026-07-20T12:55:06.957Z
-marvel,binder,S.H.I.E.L.D. Helicarrier,MSH,Marvel Super Heroes,249,normal,uncommon,1,113624,364dc091-3161-4cd7-838c-742b9325fc32,0.23,false,false,near_mint,en,AUD,2026-07-20T12:55:06.956Z
-marvel,binder,"Kang, Temporal Tyrant",MSH,Marvel Super Heroes,217,normal,uncommon,1,113289,fb96ee86-5139-472a-9c4b-8a8a4280fc7e,0.27,false,false,near_mint,en,AUD,2026-07-20T12:55:06.955Z
-marvel,binder,Visions of Villainy,MSH,Marvel Super Heroes,120,normal,common,1,114092,f8f1e4f9-7415-437f-b694-ecbdd76db114,0.23,false,false,near_mint,en,AUD,2026-07-20T12:55:06.954Z
-marvel,binder,Panther Pounce,MSH,Marvel Super Heroes,29,normal,common,1,113654,4122ae40-800d-4b6b-93c9-aa503c33f1a9,0.14,false,false,near_mint,en,AUD,2026-07-20T12:55:06.952Z
+marvel,binder,Gift of Immortality,MSC,Marvel Super Heroes Commander,134,foil,rare,1,113682,4ae22015-073a-4666-9e3b-15dcf61f50ce,0.54,false,false,near_mint,en,AUD,2026-07-20T12:55:06.963Z
+marvel,binder,The Super Hero Civil War,MSH,Marvel Super Heroes,231,foil,rare,1,113345,fbd1f333-5640-41f8-b9dd-1c322ac7724a,0.39,false,false,near_mint,en,AUD,2026-07-20T12:55:06.962Z
+marvel,binder,Swamp,MSH,Marvel Super Heroes,282,foil,common,1,113203,69eee76e-5714-4503-8170-3f551410abec,0.29,false,false,near_mint,en,AUD,2026-07-20T12:55:06.961Z
+marvel,binder,Origin of Captain America,MSC,Marvel Super Heroes Commander,605,foil,uncommon,1,113752,649ac84b-be8e-4f00-9603-815ee2b11d00,0.85,false,false,near_mint,en,AUD,2026-07-20T12:55:06.959Z
+marvel,binder,Wild Pack Squad,SPM,Marvel's Spider-Man,23,foil,common,1,107647,7b0eda7c-e44d-4d9b-9042-4a1eb8c4ed4a,0.1,false,false,near_mint,en,AUD,2026-07-20T12:55:06.958Z
+marvel,binder,Minion Missile,MSC,Marvel Super Heroes Commander,663,foil,common,1,113993,cc8567c6-f409-44d4-a19c-480c6e4abe56,0.39,false,false,near_mint,en,AUD,2026-07-20T12:55:06.957Z
+marvel,binder,S.H.I.E.L.D. Helicarrier,MSH,Marvel Super Heroes,249,foil,uncommon,1,113624,364dc091-3161-4cd7-838c-742b9325fc32,0.23,false,false,near_mint,en,AUD,2026-07-20T12:55:06.956Z
+marvel,binder,"Kang, Temporal Tyrant",MSH,Marvel Super Heroes,217,foil,uncommon,1,113289,fb96ee86-5139-472a-9c4b-8a8a4280fc7e,0.27,false,false,near_mint,en,AUD,2026-07-20T12:55:06.955Z
+marvel,binder,Visions of Villainy,MSH,Marvel Super Heroes,120,foil,common,1,114092,f8f1e4f9-7415-437f-b694-ecbdd76db114,0.23,false,false,near_mint,en,AUD,2026-07-20T12:55:06.954Z
+marvel,binder,Panther Pounce,MSH,Marvel Super Heroes,29,foil,common,1,113654,4122ae40-800d-4b6b-93c9-aa503c33f1a9,0.14,false,false,near_mint,en,AUD,2026-07-20T12:55:06.952Z
 marvel,binder,Vibranium,TMSC,Marvel Super Heroes Commander Tokens,15,normal,common,1,114314,7f9e9b3a-c515-449a-95da-ee3f5175b74f,,false,false,near_mint,en,AUD,2026-07-20T12:55:06.951Z
-marvel,binder,Take Up the Shield,MSH,Marvel Super Heroes,39,normal,common,1,113700,5199d708-8b11-461d-9e91-3e8cd70906f7,0.24,false,false,near_mint,en,AUD,2026-07-20T12:55:06.950Z
-marvel,binder,"Tigra, Feline Fury",MSH,Marvel Super Heroes,191,normal,uncommon,1,113208,73c11aea-4fa4-438d-b886-2fafa60c82f9,0.23,false,false,near_mint,en,AUD,2026-07-20T12:55:06.949Z
-marvel,binder,"Mister Fantastic, Reed Richards",MSH,Marvel Super Heroes,66,normal,uncommon,1,113139,17ef068b-61fc-443d-97b0-1e41f2622425,0.44,false,false,near_mint,en,AUD,2026-07-20T12:55:06.948Z
-marvel,binder,Beast Mode,MSC,Marvel Super Heroes Commander,713,normal,common,1,113630,39191f85-7698-487e-afad-07648a7cb695,0.32,false,false,near_mint,en,AUD,2026-07-20T12:55:06.947Z
-marvel,binder,"Spider-Rex, Daring Dino",SPM,Marvel's Spider-Man,116,normal,common,1,107636,5b6e0bea-f126-4adb-8808-901950a77c7b,0.33,false,false,near_mint,en,AUD,2026-07-20T12:55:06.946Z
-marvel,binder,Daily Bugle Newspaper,MSC,Marvel Super Heroes Commander,749,normal,uncommon,1,113671,46155477-758e-47a0-9fb9-dec7869978d9,0.53,false,false,near_mint,en,AUD,2026-07-20T12:55:06.945Z
-marvel,binder,Vibranium Energy Daggers,MSH,Marvel Super Heroes,254,normal,common,1,113694,4fe5952d-f50f-443a-b960-657fc4bc1965,0.2,false,false,near_mint,en,AUD,2026-07-20T12:55:06.943Z
+marvel,binder,Take Up the Shield,MSH,Marvel Super Heroes,39,foil,common,1,113700,5199d708-8b11-461d-9e91-3e8cd70906f7,0.24,false,false,near_mint,en,AUD,2026-07-20T12:55:06.950Z
+marvel,binder,"Tigra, Feline Fury",MSH,Marvel Super Heroes,191,foil,uncommon,1,113208,73c11aea-4fa4-438d-b886-2fafa60c82f9,0.23,false,false,near_mint,en,AUD,2026-07-20T12:55:06.949Z
+marvel,binder,"Mister Fantastic, Reed Richards",MSH,Marvel Super Heroes,66,foil,uncommon,1,113139,17ef068b-61fc-443d-97b0-1e41f2622425,0.44,false,false,near_mint,en,AUD,2026-07-20T12:55:06.948Z
+marvel,binder,Beast Mode,MSC,Marvel Super Heroes Commander,713,foil,common,1,113630,39191f85-7698-487e-afad-07648a7cb695,0.32,false,false,near_mint,en,AUD,2026-07-20T12:55:06.947Z
+marvel,binder,"Spider-Rex, Daring Dino",SPM,Marvel's Spider-Man,116,foil,common,1,107636,5b6e0bea-f126-4adb-8808-901950a77c7b,0.33,false,false,near_mint,en,AUD,2026-07-20T12:55:06.946Z
+marvel,binder,Daily Bugle Newspaper,MSC,Marvel Super Heroes Commander,749,foil,uncommon,1,113671,46155477-758e-47a0-9fb9-dec7869978d9,0.53,false,false,near_mint,en,AUD,2026-07-20T12:55:06.945Z
+marvel,binder,Vibranium Energy Daggers,MSH,Marvel Super Heroes,254,foil,common,1,113694,4fe5952d-f50f-443a-b960-657fc4bc1965,0.2,false,false,near_mint,en,AUD,2026-07-20T12:55:06.943Z
 marvel,binder,"Elektra, Daughter of the Hand",MSH,Marvel Super Heroes,366,normal,rare,1,113192,5beb6acc-38a5-47f5-ae37-bb396baffa5c,3.34,false,false,near_mint,en,AUD,2026-07-20T12:55:06.942Z
 marvel,binder,Origin of the Avengers,MSH,Marvel Super Heroes,298,normal,rare,1,113375,8a500880-56c9-44ea-ad34-c3e5123106cb,0.69,false,false,near_mint,en,AUD,2026-07-20T12:55:06.941Z
-marvel,binder,"Arnim Zola, Bio-Fanatic",MSH,Marvel Super Heroes,319,normal,uncommon,1,113859,8e3fdece-348a-45eb-871f-fffa91a1fbda,0.32,false,false,near_mint,en,AUD,2026-07-20T12:55:06.940Z
+marvel,binder,"Arnim Zola, Bio-Fanatic",MSH,Marvel Super Heroes,319,foil,uncommon,1,113859,8e3fdece-348a-45eb-871f-fffa91a1fbda,0.32,false,false,near_mint,en,AUD,2026-07-20T12:55:06.940Z
 marvel,binder,Folk Hero,MSC,Marvel Super Heroes Commander,305,normal,mythic,1,114541,c241aaf1-0d60-4e5e-a73e-958e86b0498d,3.7,false,false,near_mint,en,AUD,2026-07-20T12:55:06.939Z
-marvel,binder,Hour of Defeat,MSH,Marvel Super Heroes,99,normal,common,1,113887,9e0034dd-396e-46af-b931-0daa25da4406,0.11,false,false,near_mint,en,AUD,2026-07-20T12:55:06.938Z
+marvel,binder,Hour of Defeat,MSH,Marvel Super Heroes,99,foil,common,1,113887,9e0034dd-396e-46af-b931-0daa25da4406,0.11,false,false,near_mint,en,AUD,2026-07-20T12:55:06.938Z
 marvel,binder,"Vision, Spectral Synthezoid",MSC,Marvel Super Heroes Commander,644,foil,rare,1,113971,c3da7f82-d2f7-4aaa-b62a-238b3e3e4871,4.64,false,false,near_mint,en,AUD,2026-07-20T12:55:06.937Z
 marvel,binder,Force of Vigor,MAR,Marvel Universe,77,foil,mythic,1,110072,e507e356-6241-4347-bd56-e0609954f378,9.95,false,false,near_mint,en,AUD,2026-07-20T12:55:06.936Z
 marvel,binder,Jennifer Walters // The Sensational She-Hulk,MSH,Marvel Super Heroes,388,foil,mythic,1,113934,b51282a9-1132-4c93-a216-148d1e7bb007,102.81,false,false,near_mint,en,AUD,2026-07-20T12:55:46.277Z
 marvel,binder,Hero,TMSH,Marvel Super Heroes Tokens,2,normal,common,1,114575,e4a64831-eec5-4fc9-8904-19523af3ca42,,false,false,near_mint,en,AUD,2026-07-20T13:11:36.134Z
 marvel,binder,"Elektra, Daughter of the Hand",MSH,Marvel Super Heroes,395,foil,rare,1,113127,0c58b938-f856-4828-9d75-2e4db4547df7,49.11,false,false,near_mint,en,AUD,2026-07-20T13:11:36.133Z
 marvel,binder,Righteous Fury,MAR,Marvel Universe,49,normal,mythic,1,114052,e6a3a9fd-9653-45dd-b592-a36f85af8fc4,1.42,false,false,near_mint,en,AUD,2026-07-20T13:11:36.132Z
-marvel,binder,Baron Helmut Zemo,MSH,Marvel Super Heroes,87,normal,rare,1,110066,c2aadc25-7755-4bc8-a8af-b01d27eec364,0.53,false,false,near_mint,en,AUD,2026-07-20T13:11:36.131Z
-marvel,binder,Ultimate Nullification,MSC,Marvel Super Heroes Commander,26,normal,rare,1,114136,3c27ca1c-8f2d-4ac8-aef1-bb6201763392,0.3,false,false,near_mint,en,AUD,2026-07-20T13:11:36.130Z
+marvel,binder,Baron Helmut Zemo,MSH,Marvel Super Heroes,87,foil,rare,1,110066,c2aadc25-7755-4bc8-a8af-b01d27eec364,0.53,false,false,near_mint,en,AUD,2026-07-20T13:11:36.131Z
+marvel,binder,Ultimate Nullification,MSC,Marvel Super Heroes Commander,26,foil,rare,1,114136,3c27ca1c-8f2d-4ac8-aef1-bb6201763392,0.3,false,false,near_mint,en,AUD,2026-07-20T13:11:36.130Z
 marvel,binder,Doomsday,MSC,Marvel Super Heroes Commander,796,foil,rare,1,113780,72cd296e-e550-46bf-9378-586a24c9b2a7,6.39,false,false,near_mint,en,AUD,2026-07-20T13:11:36.129Z
-marvel,binder,Island,MSH,Marvel Super Heroes,279,normal,common,1,113225,8c1467b1-ff2c-4f73-91ba-bc2b07afc2c3,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.128Z
-marvel,binder,"Invisible Woman, Sue Storm",MSH,Marvel Super Heroes,323,normal,uncommon,1,113223,8a037650-cdb2-41f8-b3a8-fedcfdb90259,0.52,false,false,near_mint,en,AUD,2026-07-20T13:11:36.127Z
-marvel,binder,Timeline Inquiry,MSC,Marvel Super Heroes Commander,641,normal,uncommon,1,113609,30a0db77-4427-42e5-b009-a1564cbe64c0,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.126Z
-marvel,binder,TVA Bureaucrat,MSC,Marvel Super Heroes Commander,761,normal,common,1,113747,62da11c2-e37d-46e9-b225-ba864b7f2c11,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.125Z
-marvel,binder,Contract Hero,MSC,Marvel Super Heroes Commander,683,normal,common,1,113795,784af2b7-9f2d-450f-af93-b344fae39e8a,0.56,false,false,near_mint,en,AUD,2026-07-20T13:11:36.124Z
-marvel,binder,"Moonstone, Harsh Mistress",MSH,Marvel Super Heroes,107,normal,uncommon,1,113565,1a1b2bd0-e17d-4b34-a8ee-7c913a6bc945,0.23,false,false,near_mint,en,AUD,2026-07-20T13:11:36.123Z
-marvel,binder,Super Villain Lockup,MSH,Marvel Super Heroes,37,normal,uncommon,1,113568,1af5a1ca-3d11-45e3-ba12-c455c5a7fea1,0.14,false,false,near_mint,en,AUD,2026-07-20T13:11:36.122Z
-marvel,binder,Wakandan Drone Flock,MSH,Marvel Super Heroes,40,normal,common,1,113683,4b12dc1f-2218-4c71-aafa-ea6a26eeb0aa,0.03,false,false,near_mint,en,AUD,2026-07-20T13:11:36.121Z
-marvel,binder,Red Room Recruit,MSH,Marvel Super Heroes,110,normal,common,1,114087,f52a5ba3-a618-4f52-9d33-ba85345eb627,0.14,false,false,near_mint,en,AUD,2026-07-20T13:11:36.120Z
-marvel,binder,Savage Land Dinosaur,MSH,Marvel Super Heroes,185,normal,common,1,113714,562bd376-3fba-4de0-b9fc-183004b03732,0.32,false,false,near_mint,en,AUD,2026-07-20T13:11:36.119Z
+marvel,binder,Island,MSH,Marvel Super Heroes,279,foil,common,1,113225,8c1467b1-ff2c-4f73-91ba-bc2b07afc2c3,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.128Z
+marvel,binder,"Invisible Woman, Sue Storm",MSH,Marvel Super Heroes,323,foil,uncommon,1,113223,8a037650-cdb2-41f8-b3a8-fedcfdb90259,0.52,false,false,near_mint,en,AUD,2026-07-20T13:11:36.127Z
+marvel,binder,Timeline Inquiry,MSC,Marvel Super Heroes Commander,641,foil,uncommon,1,113609,30a0db77-4427-42e5-b009-a1564cbe64c0,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.126Z
+marvel,binder,TVA Bureaucrat,MSC,Marvel Super Heroes Commander,761,foil,common,1,113747,62da11c2-e37d-46e9-b225-ba864b7f2c11,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.125Z
+marvel,binder,Contract Hero,MSC,Marvel Super Heroes Commander,683,foil,common,1,113795,784af2b7-9f2d-450f-af93-b344fae39e8a,0.56,false,false,near_mint,en,AUD,2026-07-20T13:11:36.124Z
+marvel,binder,"Moonstone, Harsh Mistress",MSH,Marvel Super Heroes,107,foil,uncommon,1,113565,1a1b2bd0-e17d-4b34-a8ee-7c913a6bc945,0.23,false,false,near_mint,en,AUD,2026-07-20T13:11:36.123Z
+marvel,binder,Super Villain Lockup,MSH,Marvel Super Heroes,37,foil,uncommon,1,113568,1af5a1ca-3d11-45e3-ba12-c455c5a7fea1,0.14,false,false,near_mint,en,AUD,2026-07-20T13:11:36.122Z
+marvel,binder,Wakandan Drone Flock,MSH,Marvel Super Heroes,40,foil,common,1,113683,4b12dc1f-2218-4c71-aafa-ea6a26eeb0aa,0.03,false,false,near_mint,en,AUD,2026-07-20T13:11:36.121Z
+marvel,binder,Red Room Recruit,MSH,Marvel Super Heroes,110,foil,common,1,114087,f52a5ba3-a618-4f52-9d33-ba85345eb627,0.14,false,false,near_mint,en,AUD,2026-07-20T13:11:36.120Z
+marvel,binder,Savage Land Dinosaur,MSH,Marvel Super Heroes,185,foil,common,1,113714,562bd376-3fba-4de0-b9fc-183004b03732,0.32,false,false,near_mint,en,AUD,2026-07-20T13:11:36.119Z
 marvel,binder,Galactus,TMSH,Marvel Super Heroes Tokens,8,normal,common,1,114565,d911f8c6-88a5-4f66-a400-4df72b49c351,,false,false,near_mint,en,AUD,2026-07-20T13:11:36.118Z
 marvel,binder,World War Hulk,MSH,Marvel Super Heroes,304,foil,rare,1,110052,51524f8a-030c-4522-bfc0-d55c2c7c9326,6.85,false,false,near_mint,en,AUD,2026-07-20T13:11:36.117Z
 marvel,binder,Final Act,MAR,Marvel Universe,66,normal,mythic,1,113316,c3a474a8-b2f0-4392-9f5d-0f78b3fb29e5,2.08,false,false,near_mint,en,AUD,2026-07-20T13:11:36.116Z
 marvel,binder,Captain America's Shield,MSH,Marvel Super Heroes,311,normal,rare,1,113362,2cef736d-170d-4551-83e5-19f6b6bb677c,6.59,false,false,near_mint,en,AUD,2026-07-20T13:11:36.115Z
 marvel,binder,Kindred Dominance,MSC,Marvel Super Heroes Commander,351,normal,rare,1,114419,538492b5-b61e-4165-b432-37cba84a169d,6.64,false,false,near_mint,en,AUD,2026-07-20T13:11:36.114Z
-marvel,binder,Super-Skrull,MSH,Marvel Super Heroes,115,normal,rare,1,110042,11fc8221-756a-4919-9272-38793e9c1ad9,0.39,false,false,near_mint,en,AUD,2026-07-20T13:11:36.113Z
-marvel,binder,Swamp,MSH,Marvel Super Heroes,281,normal,common,1,113270,dda87be6-317e-4227-a96d-7742ac054d2e,0.3,false,false,near_mint,en,AUD,2026-07-20T13:11:36.112Z
+marvel,binder,Super-Skrull,MSH,Marvel Super Heroes,115,foil,rare,1,110042,11fc8221-756a-4919-9272-38793e9c1ad9,0.39,false,false,near_mint,en,AUD,2026-07-20T13:11:36.113Z
+marvel,binder,Swamp,MSH,Marvel Super Heroes,281,foil,common,1,113270,dda87be6-317e-4227-a96d-7742ac054d2e,0.3,false,false,near_mint,en,AUD,2026-07-20T13:11:36.112Z
 marvel,binder,"Abomination, Terrifying Titan",MSH,Marvel Super Heroes,333,normal,uncommon,1,113429,d1fb5d54-8232-4888-9d51-5aca90a7b6eb,0.37,false,false,near_mint,en,AUD,2026-07-20T13:11:36.111Z
 marvel,binder,Dark Ritual,MSC,Marvel Super Heroes Commander,793,foil,uncommon,1,113134,11e12a84-e7be-4afc-a230-c2e644743fa8,21.47,false,false,near_mint,en,AUD,2026-07-20T13:11:36.110Z
-marvel,binder,Shock,SPM,Marvel's Spider-Man,88,normal,common,1,107645,760b41a1-c087-4b11-b8a0-fb01d8a4c0c6,0.17,false,false,near_mint,en,AUD,2026-07-20T13:11:36.109Z
-marvel,binder,Heroic Teamwork,MSC,Marvel Super Heroes Commander,597,normal,common,1,113837,8705e5a4-8a62-40fa-a649-270557c382ce,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.108Z
-marvel,binder,"Doc Samson, Super Psychiatrist",MSH,Marvel Super Heroes,164,normal,uncommon,1,113329,19dc5fcc-d05d-41a0-84c5-2dec996f3e4f,0.39,false,false,near_mint,en,AUD,2026-07-20T13:11:36.107Z
-marvel,binder,"Night Nurse, Healer of Heroes",MSH,Marvel Super Heroes,26,normal,uncommon,1,113612,3199907b-9f24-4554-942a-8ab5a7701717,0.29,false,false,near_mint,en,AUD,2026-07-20T13:11:36.106Z
-marvel,binder,Borough Backup,MSH,Marvel Super Heroes,7,normal,common,1,113947,bb753ac8-67e1-44b0-b404-37f04c2b7438,0.14,false,false,near_mint,en,AUD,2026-07-20T13:11:36.105Z
-marvel,binder,Widow's Bite,MSH,Marvel Super Heroes,122,normal,common,1,114029,dbee18af-9ade-4251-81a1-f6e7ffbf480f,0.09,false,false,near_mint,en,AUD,2026-07-20T13:11:36.104Z
+marvel,binder,Shock,SPM,Marvel's Spider-Man,88,foil,common,1,107645,760b41a1-c087-4b11-b8a0-fb01d8a4c0c6,0.17,false,false,near_mint,en,AUD,2026-07-20T13:11:36.109Z
+marvel,binder,Heroic Teamwork,MSC,Marvel Super Heroes Commander,597,foil,common,1,113837,8705e5a4-8a62-40fa-a649-270557c382ce,0.36,false,false,near_mint,en,AUD,2026-07-20T13:11:36.108Z
+marvel,binder,"Doc Samson, Super Psychiatrist",MSH,Marvel Super Heroes,164,foil,uncommon,1,113329,19dc5fcc-d05d-41a0-84c5-2dec996f3e4f,0.39,false,false,near_mint,en,AUD,2026-07-20T13:11:36.107Z
+marvel,binder,"Night Nurse, Healer of Heroes",MSH,Marvel Super Heroes,26,foil,uncommon,1,113612,3199907b-9f24-4554-942a-8ab5a7701717,0.29,false,false,near_mint,en,AUD,2026-07-20T13:11:36.106Z
+marvel,binder,Borough Backup,MSH,Marvel Super Heroes,7,foil,common,1,113947,bb753ac8-67e1-44b0-b404-37f04c2b7438,0.14,false,false,near_mint,en,AUD,2026-07-20T13:11:36.105Z
+marvel,binder,Widow's Bite,MSH,Marvel Super Heroes,122,foil,common,1,114029,dbee18af-9ade-4251-81a1-f6e7ffbf480f,0.09,false,false,near_mint,en,AUD,2026-07-20T13:11:36.104Z
 marvel,binder,Arc Reactor,MSH,Marvel Super Heroes,310,foil,rare,1,113164,3b7e9150-028d-482d-9bd8-d9d3e56d24be,4.33,false,false,near_mint,en,AUD,2026-07-20T13:47:10.779Z
 marvel,binder,Force of Vigor,MAR,Marvel Universe,77,foil,mythic,1,110072,e507e356-6241-4347-bd56-e0609954f378,9.95,false,false,near_mint,en,AUD,2026-07-20T13:47:10.778Z
-marvel,binder,Kang the Conqueror,MSH,Marvel Super Heroes,62,normal,mythic,1,113212,79747b45-fd7b-4023-9a9c-4d9dab2429fe,0.75,false,false,near_mint,en,AUD,2026-07-20T13:47:10.777Z
+marvel,binder,Kang the Conqueror,MSH,Marvel Super Heroes,403,normal,mythic,1,113188,55b486ad-53bd-4255-9f8e-286b300e7e43,0.75,false,false,near_mint,en,AUD,2026-07-20T13:47:10.777Z
 marvel,binder,Black Market Connections,MSC,Marvel Super Heroes Commander,155,normal,rare,1,114249,9d9ca869-e68a-4f53-9f52-85c714dac6f3,14.39,false,false,near_mint,en,AUD,2026-07-20T13:47:10.776Z
 marvel,binder,Namor the Sub-Mariner,MSH,Marvel Super Heroes,69,foil,mythic,1,110054,7aaefcf9-fbe1-4767-92a5-09825761d116,19.77,false,false,near_mint,en,AUD,2026-07-20T13:47:10.775Z
-marvel,binder,Plains,MSH,Marvel Super Heroes,278,normal,common,1,113202,69a24fc3-90f9-4f2e-91d9-1aaca888e432,0.36,false,false,near_mint,en,AUD,2026-07-20T13:47:10.774Z
-marvel,binder,"Baron Strucker, HYDRA Overlord",MSH,Marvel Super Heroes,315,normal,uncommon,1,113395,fa4e32b7-8c2c-4efa-b5a4-b32abcae1ad2,0.36,false,false,near_mint,en,AUD,2026-07-20T13:47:10.773Z
-marvel,binder,Origin of Black Widow,MSC,Marvel Super Heroes Commander,664,normal,uncommon,1,113799,78e4cbed-41e0-46f8-89e4-88f24f026070,1.09,false,false,near_mint,en,AUD,2026-07-20T13:47:10.772Z
-marvel,binder,Taxi Driver,SPM,Marvel's Spider-Man,97,normal,common,1,107663,a80d3ed9-5e81-41b7-bb74-ab86cba841c8,0.19,false,false,near_mint,en,AUD,2026-07-20T13:47:10.771Z
-marvel,binder,Captain America's Motorcycle,MSC,Marvel Super Heroes Commander,681,normal,common,1,114076,efc25013-9477-4eb7-8b16-87e5685876ca,0.46,false,false,near_mint,en,AUD,2026-07-20T13:47:10.770Z
-marvel,binder,"Bullseye, Death Dealer",MSH,Marvel Super Heroes,209,normal,uncommon,1,114104,fd1f0b5f-5e0e-4da1-ab54-a62db5af3591,0.26,false,false,near_mint,en,AUD,2026-07-20T13:47:10.769Z
-marvel,binder,"Iron Lad, Diverging Destiny",MSH,Marvel Super Heroes,59,normal,uncommon,1,113407,355e7197-2f20-43b6-9305-73c4e1fd4a3c,0.32,false,false,near_mint,en,AUD,2026-07-20T13:47:10.768Z
-marvel,binder,Agent of Atlas,MSH,Marvel Super Heroes,3,normal,common,1,113910,a9db550e-ed1f-4973-a7f5-ec2e6adb8e6b,0.13,false,false,near_mint,en,AUD,2026-07-20T13:47:10.767Z
-marvel,binder,Call Damage Control,MSH,Marvel Super Heroes,162,normal,common,1,114035,de1ed886-c33b-4cfd-8442-944cec654a8b,0.27,false,false,near_mint,en,AUD,2026-07-20T13:47:10.766Z
-marvel,binder,Web Up,MSH,Marvel Super Heroes,41,normal,common,1,113882,9a1b057b-229c-4f65-ba4e-12dd342238de,0.17,false,false,near_mint,en,AUD,2026-07-20T13:47:10.765Z
+marvel,binder,Plains,MSH,Marvel Super Heroes,278,foil,common,1,113202,69a24fc3-90f9-4f2e-91d9-1aaca888e432,0.36,false,false,near_mint,en,AUD,2026-07-20T13:47:10.774Z
+marvel,binder,"Baron Strucker, HYDRA Overlord",MSH,Marvel Super Heroes,315,foil,uncommon,1,113395,fa4e32b7-8c2c-4efa-b5a4-b32abcae1ad2,0.36,false,false,near_mint,en,AUD,2026-07-20T13:47:10.773Z
+marvel,binder,Origin of Black Widow,MSC,Marvel Super Heroes Commander,664,foil,uncommon,1,113799,78e4cbed-41e0-46f8-89e4-88f24f026070,1.09,false,false,near_mint,en,AUD,2026-07-20T13:47:10.772Z
+marvel,binder,Taxi Driver,SPM,Marvel's Spider-Man,97,foil,common,1,107663,a80d3ed9-5e81-41b7-bb74-ab86cba841c8,0.19,false,false,near_mint,en,AUD,2026-07-20T13:47:10.771Z
+marvel,binder,Captain America's Motorcycle,MSC,Marvel Super Heroes Commander,681,foil,common,1,114076,efc25013-9477-4eb7-8b16-87e5685876ca,0.46,false,false,near_mint,en,AUD,2026-07-20T13:47:10.770Z
+marvel,binder,"Bullseye, Death Dealer",MSH,Marvel Super Heroes,209,foil,uncommon,1,114104,fd1f0b5f-5e0e-4da1-ab54-a62db5af3591,0.26,false,false,near_mint,en,AUD,2026-07-20T13:47:10.769Z
+marvel,binder,"Iron Lad, Diverging Destiny",MSH,Marvel Super Heroes,59,foil,uncommon,1,113407,355e7197-2f20-43b6-9305-73c4e1fd4a3c,0.32,false,false,near_mint,en,AUD,2026-07-20T13:47:10.768Z
+marvel,binder,Agent of Atlas,MSH,Marvel Super Heroes,3,foil,common,1,113910,a9db550e-ed1f-4973-a7f5-ec2e6adb8e6b,0.13,false,false,near_mint,en,AUD,2026-07-20T13:47:10.767Z
+marvel,binder,Call Damage Control,MSH,Marvel Super Heroes,162,foil,common,1,114035,de1ed886-c33b-4cfd-8442-944cec654a8b,0.27,false,false,near_mint,en,AUD,2026-07-20T13:47:10.766Z
+marvel,binder,Web Up,MSH,Marvel Super Heroes,41,foil,common,1,113882,9a1b057b-229c-4f65-ba4e-12dd342238de,0.17,false,false,near_mint,en,AUD,2026-07-20T13:47:10.765Z
 marvel,binder,The Vision,MSH,Marvel Super Heroes,379,foil,rare,1,113264,d41a55d9-6007-4b1c-a917-2cb5e8f64000,6.33,false,false,near_mint,en,AUD,2026-07-21T14:25:06.251Z
 marvel,binder,Heroic Intervention,MAR,Marvel Universe,80,foil,mythic,1,110049,4208a5fd-4ca9-4648-883e-5dfe02746e68,13.39,false,false,near_mint,en,AUD,2026-07-21T14:25:06.250Z
 marvel,binder,"Nick Fury, Agent of S.H.I.E.L.D.",MSH,Marvel Super Heroes,357,normal,rare,1,113405,307db766-8d25-485d-81da-eb72548f9ce0,4.76,false,false,near_mint,en,AUD,2026-07-21T14:25:06.249Z
-marvel,binder,Skullclamp,MSC,Marvel Super Heroes Commander,210,normal,rare,1,114216,1d8b007b-3169-4ee3-80c7-781fc096fc7a,7.09,false,false,near_mint,en,AUD,2026-07-21T14:25:06.248Z
-marvel,binder,"Iron Fist, Hero for Hire",MSC,Marvel Super Heroes Commander,692,normal,rare,1,113890,9f1cdf84-c034-4435-8ce7-50f6b777fb57,1.01,false,false,near_mint,en,AUD,2026-07-21T14:25:06.247Z
+marvel,binder,Skullclamp,MSC,Marvel Super Heroes Commander,451,normal,rare,1,114511,a740d70c-b877-44cf-beb4-774ec66236c5,7.09,false,false,near_mint,en,AUD,2026-07-21T14:25:06.248Z
+marvel,binder,"Iron Fist, Hero for Hire",MSC,Marvel Super Heroes Commander,692,foil,rare,1,113890,9f1cdf84-c034-4435-8ce7-50f6b777fb57,1.01,false,false,near_mint,en,AUD,2026-07-21T14:25:06.247Z
 marvel,binder,"Bullseye, Death Dealer",MSH,Marvel Super Heroes,325,foil,uncommon,1,113838,879abc8e-bc69-4214-945a-09d02b66010c,0.47,false,false,near_mint,en,AUD,2026-07-21T14:25:06.246Z
-marvel,binder,Unlucky Witness,MSC,Marvel Super Heroes Commander,812,normal,uncommon,1,113693,4f8715ac-5654-44c6-8892-ad76f06b4fe5,0.56,false,false,near_mint,en,AUD,2026-07-21T14:25:06.245Z
-marvel,binder,Farseek,MSC,Marvel Super Heroes Commander,173,normal,common,1,114181,c1aac0f5-1d01-4673-b8d3-878d9a1d423c,0.61,false,false,near_mint,en,AUD,2026-07-21T14:25:06.244Z
-marvel,binder,"Doc Ock, Sinister Scientist",SPM,Marvel's Spider-Man,29,normal,common,1,107678,de16ad65-c8c3-48c0-9d13-5af91b4e6f01,0.16,false,false,near_mint,en,AUD,2026-07-21T14:25:06.243Z
-marvel,binder,Villainous Hideout,MSH,Marvel Super Heroes,276,normal,uncommon,1,113823,822b0249-e1df-453d-8b60-75a5196ed818,0.31,false,false,near_mint,en,AUD,2026-07-21T14:25:06.242Z
-marvel,binder,Team Tactics,MSH,Marvel Super Heroes,155,normal,uncommon,1,114026,db1c7a71-3d01-4f2a-9b25-2a19bb0d1a56,0.36,false,false,near_mint,en,AUD,2026-07-21T14:25:06.241Z
-marvel,binder,Giant-Sized Flying Ant,MSH,Marvel Super Heroes,56,normal,common,1,114024,da529bb3-725b-41aa-ac34-b4117ff5d95b,0.16,false,false,near_mint,en,AUD,2026-07-21T14:25:06.240Z
-marvel,binder,Crowd of True Believers,MSH,Marvel Super Heroes,14,normal,common,1,113684,4b2fffb8-d538-4772-8fbc-9bec3b9c4d9c,0.07,false,false,near_mint,en,AUD,2026-07-21T14:25:06.239Z
-marvel,binder,Powerful Broker,MSH,Marvel Super Heroes,179,normal,common,1,113818,801f0417-b663-4e28-9a61-9570061654d7,0.19,false,false,near_mint,en,AUD,2026-07-21T14:25:06.238Z
+marvel,binder,Unlucky Witness,MSC,Marvel Super Heroes Commander,812,foil,uncommon,1,113693,4f8715ac-5654-44c6-8892-ad76f06b4fe5,0.56,false,false,near_mint,en,AUD,2026-07-21T14:25:06.245Z
+marvel,binder,Farseek,MSC,Marvel Super Heroes Commander,173,foil,common,1,114181,c1aac0f5-1d01-4673-b8d3-878d9a1d423c,0.61,false,false,near_mint,en,AUD,2026-07-21T14:25:06.244Z
+marvel,binder,"Doc Ock, Sinister Scientist",SPM,Marvel's Spider-Man,29,foil,common,1,107678,de16ad65-c8c3-48c0-9d13-5af91b4e6f01,0.16,false,false,near_mint,en,AUD,2026-07-21T14:25:06.243Z
+marvel,binder,Villainous Hideout,MSH,Marvel Super Heroes,276,foil,uncommon,1,113823,822b0249-e1df-453d-8b60-75a5196ed818,0.31,false,false,near_mint,en,AUD,2026-07-21T14:25:06.242Z
+marvel,binder,Team Tactics,MSH,Marvel Super Heroes,155,foil,uncommon,1,114026,db1c7a71-3d01-4f2a-9b25-2a19bb0d1a56,0.36,false,false,near_mint,en,AUD,2026-07-21T14:25:06.241Z
+marvel,binder,Giant-Sized Flying Ant,MSH,Marvel Super Heroes,56,foil,common,1,114024,da529bb3-725b-41aa-ac34-b4117ff5d95b,0.16,false,false,near_mint,en,AUD,2026-07-21T14:25:06.240Z
+marvel,binder,Crowd of True Believers,MSH,Marvel Super Heroes,14,foil,common,1,113684,4b2fffb8-d538-4772-8fbc-9bec3b9c4d9c,0.07,false,false,near_mint,en,AUD,2026-07-21T14:25:06.239Z
+marvel,binder,Powerful Broker,MSH,Marvel Super Heroes,179,foil,common,1,113818,801f0417-b663-4e28-9a61-9570061654d7,0.19,false,false,near_mint,en,AUD,2026-07-21T14:25:06.238Z
 marvel,binder,The Ten Rings,MSH,Marvel Super Heroes,313,foil,mythic,1,113174,47360bb6-9724-4418-b1f3-59d0b28e7798,50.64,false,false,near_mint,en,AUD,2026-07-21T14:32:45.139Z
 marvel,binder,Chaos Warp,MAR,Marvel Universe,69,normal,mythic,1,110044,2a6c3d3b-93ec-43df-a0cd-ea12ab047d51,7.14,false,false,near_mint,en,AUD,2026-07-21T14:32:45.138Z
 marvel,binder,"Black Widow, Intel Expert",MSC,Marvel Super Heroes Commander,504,normal,rare,1,114411,49671454-db5d-4b0f-a609-7f717dd96d24,3.91,false,false,near_mint,en,AUD,2026-07-21T14:32:45.137Z
-marvel,binder,Fight for the Throne,MSC,Marvel Super Heroes Commander,65,normal,rare,1,114308,6da747ef-4d8f-49a2-8682-52ab87e6ad6e,0.61,false,false,near_mint,en,AUD,2026-07-21T14:32:45.136Z
-marvel,binder,"Taskmaster, Mercenary Mimic",MSH,Marvel Super Heroes,232,normal,rare,1,113532,0d4265fd-cbfa-4e57-89fd-a1d757acfe81,0.57,false,false,near_mint,en,AUD,2026-07-21T14:32:45.135Z
-marvel,binder,Avengers Tower,MSH,Marvel Super Heroes,334,normal,uncommon,1,113399,1292713f-1462-438f-a3a2-1f69ece99668,0.41,false,false,near_mint,en,AUD,2026-07-21T14:32:45.133Z
+marvel,binder,Fight for the Throne,MSC,Marvel Super Heroes Commander,65,foil,rare,1,114308,6da747ef-4d8f-49a2-8682-52ab87e6ad6e,0.61,false,false,near_mint,en,AUD,2026-07-21T14:32:45.136Z
+marvel,binder,"Taskmaster, Mercenary Mimic",MSH,Marvel Super Heroes,232,foil,rare,1,113532,0d4265fd-cbfa-4e57-89fd-a1d757acfe81,0.57,false,false,near_mint,en,AUD,2026-07-21T14:32:45.135Z
+marvel,binder,Avengers Tower,MSH,Marvel Super Heroes,334,foil,uncommon,1,113399,1292713f-1462-438f-a3a2-1f69ece99668,0.41,false,false,near_mint,en,AUD,2026-07-21T14:32:45.133Z
 marvel,binder,"X-23, Deadly Weapon",MSC,Marvel Super Heroes Commander,738,foil,uncommon,1,113644,3dc25593-46cc-4f66-8950-4e18b92d24f2,9.44,false,false,near_mint,en,AUD,2026-07-21T14:32:45.132Z
-marvel,binder,"Songbird, Sonic Screamer",MSC,Marvel Super Heroes Commander,762,normal,common,1,113599,2b327925-8a50-4fd7-9010-673f9a3e97ce,0.61,false,false,near_mint,en,AUD,2026-07-21T14:32:45.131Z
-marvel,binder,Doc Ock's Henchmen,SPM,Marvel's Spider-Man,30,normal,common,1,107659,a383c442-3f4a-4115-97e4-23f0eb88465b,0.21,false,false,near_mint,en,AUD,2026-07-21T14:32:45.130Z
-marvel,binder,"Killmonger, Scourge of Wakanda",MSH,Marvel Super Heroes,218,normal,uncommon,1,113184,5060aa13-4b33-4b3a-8bdb-dd81308fa3e3,0.26,false,false,near_mint,en,AUD,2026-07-21T14:32:45.129Z
-marvel,binder,Falcon's Wing Harness,MSH,Marvel Super Heroes,53,normal,uncommon,1,113402,20e93f86-9e20-4e08-9bf7-ae6ebebf6876,0.24,false,false,near_mint,en,AUD,2026-07-21T14:32:45.128Z
-marvel,binder,Project Deathlok Soldier,MSH,Marvel Super Heroes,109,normal,common,1,113724,5c21a120-4ec7-46ec-974a-2204edb92abb,0.16,false,false,near_mint,en,AUD,2026-07-21T14:32:45.127Z
-marvel,binder,Dependable Quinjet,MSH,Marvel Super Heroes,246,normal,common,1,113961,c035c625-4de5-4c3b-9d07-aa1df8fc7b78,0.13,false,false,near_mint,en,AUD,2026-07-21T14:32:45.126Z
-marvel,binder,Ninja of the Hand,MSH,Marvel Super Heroes,108,normal,common,1,113757,6b8116d8-2cc6-449b-a8b4-8a5166553497,0.17,false,false,near_mint,en,AUD,2026-07-21T14:32:45.125Z
+marvel,binder,"Songbird, Sonic Screamer",MSC,Marvel Super Heroes Commander,762,foil,common,1,113599,2b327925-8a50-4fd7-9010-673f9a3e97ce,0.61,false,false,near_mint,en,AUD,2026-07-21T14:32:45.131Z
+marvel,binder,Doc Ock's Henchmen,SPM,Marvel's Spider-Man,30,foil,common,1,107659,a383c442-3f4a-4115-97e4-23f0eb88465b,0.21,false,false,near_mint,en,AUD,2026-07-21T14:32:45.130Z
+marvel,binder,"Killmonger, Scourge of Wakanda",MSH,Marvel Super Heroes,218,foil,uncommon,1,113184,5060aa13-4b33-4b3a-8bdb-dd81308fa3e3,0.26,false,false,near_mint,en,AUD,2026-07-21T14:32:45.129Z
+marvel,binder,Falcon's Wing Harness,MSH,Marvel Super Heroes,53,foil,uncommon,1,113402,20e93f86-9e20-4e08-9bf7-ae6ebebf6876,0.24,false,false,near_mint,en,AUD,2026-07-21T14:32:45.128Z
+marvel,binder,Project Deathlok Soldier,MSH,Marvel Super Heroes,109,foil,common,1,113724,5c21a120-4ec7-46ec-974a-2204edb92abb,0.16,false,false,near_mint,en,AUD,2026-07-21T14:32:45.127Z
+marvel,binder,Dependable Quinjet,MSH,Marvel Super Heroes,246,foil,common,1,113961,c035c625-4de5-4c3b-9d07-aa1df8fc7b78,0.13,false,false,near_mint,en,AUD,2026-07-21T14:32:45.126Z
+marvel,binder,Ninja of the Hand,MSH,Marvel Super Heroes,108,foil,common,1,113757,6b8116d8-2cc6-449b-a8b4-8a5166553497,0.17,false,false,near_mint,en,AUD,2026-07-21T14:32:45.125Z
 marvel,binder,Fisk Tower,MSH,Marvel Super Heroes,265,foil,common,1,113786,7690e624-93c1-46f4-8f33-e28d881787d3,0.34,false,false,near_mint,en,AUD,2026-07-25T01:03:02.170Z
 marvel,binder,Stark Industries Executive,MSH,Marvel Super Heroes,153,foil,common,1,113772,709ffd07-706c-471f-b74d-4637afa11686,0.36,false,false,near_mint,en,AUD,2026-07-25T01:03:02.171Z
 marvel,binder,Rapid Rescue,MSH,Marvel Super Heroes,181,foil,common,1,114015,d739e636-681e-4423-84e3-91efd02b2c94,0.31,false,false,near_mint,en,AUD,2026-07-25T01:03:02.172Z
@@ -584,8 +584,277 @@ marvel,binder,Asgardian Inspiration,MSC,Marvel Super Heroes Commander,678,foil,u
 marvel,binder,"Invisible Woman, Sue Storm",MSH,Marvel Super Heroes,323,foil,uncommon,1,113223,8a037650-cdb2-41f8-b3a8-fedcfdb90259,0.54,false,false,near_mint,en,AUD,2026-07-25T01:03:02.178Z
 marvel,binder,Island,MSH,Marvel Super Heroes,280,foil,common,1,113230,937b3d7d-decb-4e17-998a-6def3f2c97a2,0.54,false,false,near_mint,en,AUD,2026-07-25T01:03:02.179Z
 marvel,binder,Armor Wars,MSH,Marvel Super Heroes,203,foil,rare,1,113133,11a13397-1d31-4257-87c2-a757a751c601,0.49,false,false,near_mint,en,AUD,2026-07-25T01:03:02.180Z
-marvel,binder,"Medusa, Inhuman Queen",MSC,Marvel Super Heroes Commander,68,normal,rare,1,114132,3187ebab-8008-455c-a3c9-794a5b225b88,0.5,false,false,near_mint,en,AUD,2026-07-25T01:03:02.181Z
+marvel,binder,"Medusa, Inhuman Queen",MSC,Marvel Super Heroes Commander,68,foil,rare,1,114132,3187ebab-8008-455c-a3c9-794a5b225b88,0.5,false,false,near_mint,en,AUD,2026-07-25T01:03:02.181Z
 marvel,binder,"Thanos, Death's Consort",MSC,Marvel Super Heroes Commander,508,normal,rare,1,114409,4842d520-8bce-4b95-bcb6-bd9eb9374f90,5.95,false,false,near_mint,en,AUD,2026-07-25T01:03:02.182Z
 marvel,binder,Narset's Reversal,MAR,Marvel Universe,58,normal,mythic,1,113514,0355887d-eec7-4b1c-ada1-014ac7fce5c6,2.76,false,false,near_mint,en,AUD,2026-07-25T01:03:02.183Z
 marvel,binder,"Ultron, Artificial Malevolence",MSH,Marvel Super Heroes,344,foil,mythic,1,113348,8a65f1b1-56b5-4a4c-acc7-d1b8933244a4,57.13,false,false,near_mint,en,AUD,2026-07-25T01:03:02.184Z
 marvel,binder,Soldier,TMSH,Marvel Super Heroes Tokens,4,normal,common,1,114299,5ef2f34e-0ff2-4157-9d4a-73ecf4cd449b,,false,false,near_mint,en,AUD,2026-07-25T01:03:02.185Z
+Blood Rites,deck,"Clavileño, First of the Blessed",LCC,The Lost Caverns of Ixalan Commander,2,foil,mythic,1,,9f55b648-b1ec-407a-a0c7-7647755793d1,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Arcane Signet,LCC,The Lost Caverns of Ixalan Commander,299,normal,common,1,,fc6c69a0-ac24-4486-8893-a6303d08fc6e,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Austere Command,LCC,The Lost Caverns of Ixalan Commander,126,normal,rare,1,,cf1f630e-8b55-4f5a-a7f2-3161801de767,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Bartolomé del Presidio,LCI,The Lost Caverns of Ixalan,224,normal,uncommon,1,,690ccdc7-6c43-4902-9d11-2f07b7a36b11,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Blade of the Bloodchief,LCC,The Lost Caverns of Ixalan Commander,300,normal,rare,1,,34e7bebf-1844-476c-a947-978393908fa2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Blood Artist,LCC,The Lost Caverns of Ixalan Commander,182,normal,uncommon,1,,b7f1c316-cf2f-4bbf-89a1-79c8043bdd96,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Bloodghast,LCC,The Lost Caverns of Ixalan Commander,184,normal,rare,1,,08e01310-d192-41e9-a6f0-0edbd6fb3cfb,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Bloodline Necromancer,LCC,The Lost Caverns of Ixalan Commander,185,normal,uncommon,1,,6b1e719c-4679-4cf0-8ca4-ae740eb0ba92,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Bloodtracker,LCC,The Lost Caverns of Ixalan Commander,186,normal,rare,1,,d654462f-5346-454f-9905-41218cf6b29e,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Bojuka Bog,LCC,The Lost Caverns of Ixalan Commander,320,normal,common,1,,0c7d4fbe-fa7a-4b34-b339-197f08409cbf,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Butcher of Malakir,LCC,The Lost Caverns of Ixalan Commander,187,normal,rare,1,,9d805499-0739-403e-8447-ed2707dc9eb2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Carmen, Cruel Skymarcher",LCC,The Lost Caverns of Ixalan Commander,5,foil,mythic,1,,c0e07f8a-5290-47c4-a93d-0c3a14afebd3,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Champion of Dusk,LCC,The Lost Caverns of Ixalan Commander,188,normal,rare,1,,5fa1674a-86cc-4fdf-8671-860b2bf5043d,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Charismatic Conqueror,LCC,The Lost Caverns of Ixalan Commander,70,normal,rare,1,,599c934d-bfff-43ce-a545-6e3cde124515,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Command Tower,LCC,The Lost Caverns of Ixalan Commander,325,normal,common,1,,d477d733-2360-4f1d-9ecd-cdedc2e8a7ae,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Commander's Sphere,LCC,The Lost Caverns of Ixalan Commander,301,normal,common,1,,c643146f-da7b-4cc0-b874-4accad99ccce,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Cordial Vampire,LCC,The Lost Caverns of Ixalan Commander,189,normal,rare,1,,0d91e61d-e3bf-4ddc-9f01-18b1abe35a61,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Crossway Troublemakers,LCC,The Lost Caverns of Ixalan Commander,190,normal,rare,1,,95ef4f86-9b96-4181-9442-44adce180984,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Cruel Celebrant,LCC,The Lost Caverns of Ixalan Commander,267,normal,uncommon,1,,b3f8be99-a398-4664-beb6-3e98d6e62a32,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Damn,LCC,The Lost Caverns of Ixalan Commander,191,normal,rare,1,,84056124-1a6f-4274-bee2-74cf0debddb5,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Drana, Liberator of Malakir",LCC,The Lost Caverns of Ixalan Commander,193,normal,mythic,1,,0850b41d-3589-40cd-ae22-cc5b4ddee1c4,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Dusk Legion Sergeant,LCC,The Lost Caverns of Ixalan Commander,80,normal,rare,1,,5bfc9243-7aec-48e6-9f3b-1bbbb5370063,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Dusk Legion Zealot,LCC,The Lost Caverns of Ixalan Commander,194,normal,common,1,,72048624-e3fd-4e9b-91a9-996ea3a1a74f,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Elenda, the Dusk Rose",LCC,The Lost Caverns of Ixalan Commander,268,normal,mythic,1,,e18feca3-1b1b-4456-8873-25a24849a917,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Elenda's Hierophant,LCC,The Lost Caverns of Ixalan Commander,71,normal,rare,1,,d12f728a-1bbb-4bee-96d4-d721292997ba,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Etchings of the Chosen,LCC,The Lost Caverns of Ixalan Commander,269,normal,uncommon,1,,496e4759-9d6b-42fa-833c-1fff2c9d03f2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Exquisite Blood,LCC,The Lost Caverns of Ixalan Commander,195,normal,rare,1,,0e8ccfa7-4178-476a-a155-0ca1c98556c9,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Falkenrath Noble,LCC,The Lost Caverns of Ixalan Commander,196,normal,uncommon,1,,0fad9e17-c45c-4f94-af5b-63dc1dda1e5b,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Glass-Cast Heart,LCC,The Lost Caverns of Ixalan Commander,199,normal,rare,1,,f36a4054-903c-468a-877b-0ba43a403cc1,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Heirloom Blade,LCC,The Lost Caverns of Ixalan Commander,303,normal,uncommon,1,,49fe8b13-3f83-4a35-aa2d-2292b96f3d3e,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Indulgent Aristocrat,LCC,The Lost Caverns of Ixalan Commander,200,normal,uncommon,1,,296e4dc6-6997-4c4a-8137-c0835b44a1c9,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Isolated Chapel,LCC,The Lost Caverns of Ixalan Commander,337,normal,rare,1,,c688891e-0a25-4630-acfc-c3a0bed2b2f2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Kindred Boon,LCC,The Lost Caverns of Ixalan Commander,129,normal,rare,1,,a9d21710-3006-45a0-9af2-275159bb5315,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Legion Lieutenant,LCC,The Lost Caverns of Ixalan Commander,275,normal,uncommon,1,,85c6bd7d-537a-42fe-9c68-742bdf2e7025,,false,false,near_mint,en,AUD,
+Blood Rites,deck,March of the Canonized,LCC,The Lost Caverns of Ixalan Commander,73,normal,rare,1,,547581d0-025a-435a-8016-ee7c6b890e53,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Martyr of Dusk,LCC,The Lost Caverns of Ixalan Commander,132,normal,common,1,,d32e68b4-2584-4b1c-9268-642e3678bae7,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Master of Dark Rites,LCC,The Lost Caverns of Ixalan Commander,83,normal,rare,1,,6394a522-37bb-4cf3-b434-5121c8000ac6,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Mavren Fein, Dusk Apostle",LCC,The Lost Caverns of Ixalan Commander,133,normal,rare,1,,fdc3e998-760b-41ca-9f92-270aaa82f3fb,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Mind Stone,LCC,The Lost Caverns of Ixalan Commander,309,normal,common,1,,8615e46e-56c3-49f6-b4ad-44ec25be5f05,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Myriad Landscape,LCC,The Lost Caverns of Ixalan Commander,343,normal,uncommon,1,,92a45243-2ea9-4da1-984b-287a555a51f4,,false,false,near_mint,en,AUD,
+Blood Rites,deck,New Blood,LCC,The Lost Caverns of Ixalan Commander,202,normal,rare,1,,6ee669ab-0ae6-43e5-86fd-f0dcb621e478,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Nighthawk Scavenger,LCC,The Lost Caverns of Ixalan Commander,203,normal,rare,1,,ebc64d89-4fa0-40fc-9d93-154d50deaaa1,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Oathsworn Vampire,LCC,The Lost Caverns of Ixalan Commander,204,normal,uncommon,1,,cde542de-0b87-4eb1-be05-abdb729ada10,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Olivia's Wrath,LCC,The Lost Caverns of Ixalan Commander,205,normal,rare,1,,3eb5cc8d-a198-43cd-a2bd-9c9414d815b2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Order of Sacred Dusk,LCC,The Lost Caverns of Ixalan Commander,97,normal,rare,1,,32f34099-c6ff-49d2-911a-23ab806c77e9,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Orzhov Basilica,LCC,The Lost Caverns of Ixalan Commander,345,normal,common,1,,315107f2-3c1c-43b5-aa23-80ec8f722861,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Orzhov Signet,LCC,The Lost Caverns of Ixalan Commander,310,normal,uncommon,1,,0f0d3c9c-7b3d-4dd1-bf0a-41652e2e1f94,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Pact of the Serpent,LCC,The Lost Caverns of Ixalan Commander,206,normal,rare,1,,481d268a-848c-4ccd-95ff-eed77dc20776,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Path of Ancestry,LCC,The Lost Caverns of Ixalan Commander,346,normal,common,1,,f30552a5-db59-4164-bbd2-44bf7ae1e91e,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Patron of the Vein,LCC,The Lost Caverns of Ixalan Commander,207,normal,rare,1,,a70d7b65-77d0-41d3-9735-d64b9288fde1,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Plains,LCI,The Lost Caverns of Ixalan,394,normal,common,8,,e06c72cb-03ce-48eb-b5dc-b2301c6871a2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Promise of Aclazotz // Foul Rebirth,LCC,The Lost Caverns of Ixalan Commander,84,normal,rare,1,,b88a3b40-bf04-4017-be97-08ab86e331d1,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Radiant Destiny,LCC,The Lost Caverns of Ixalan Commander,135,normal,rare,1,,d1d03bfb-c3bf-4837-b4df-e6339997dedb,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Redemption Choir,LCC,The Lost Caverns of Ixalan Commander,74,normal,rare,1,,981dcacb-24a3-43bb-bb64-2b227f31dc3e,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Return to Dust,LCC,The Lost Caverns of Ixalan Commander,136,normal,uncommon,1,,664e3826-799b-4edb-8811-2d2b6355edaf,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Rogue's Passage,LCC,The Lost Caverns of Ixalan Commander,349,normal,uncommon,1,,a7dc75a8-c500-4b50-aff9-32ce36566104,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Sanctum Seeker,LCC,The Lost Caverns of Ixalan Commander,209,normal,rare,1,,893279fb-6f51-4d1e-b2fd-a0cdb603785f,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Secluded Courtyard,LCC,The Lost Caverns of Ixalan Commander,350,normal,uncommon,1,,26c40b2a-cb27-4fad-a9b2-1fb065d44d77,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Shineshadow Snarl,LCC,The Lost Caverns of Ixalan Commander,351,normal,rare,1,,3d483bcf-438a-499b-86a5-6357d718faf1,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Sol Ring,LCC,The Lost Caverns of Ixalan Commander,313,normal,uncommon,1,,2d47121d-8b90-4d28-9ffa-0a640b9dd611,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Sorin, Lord of Innistrad",LCC,The Lost Caverns of Ixalan Commander,289,normal,mythic,1,,ab98caf7-cc24-4027-ad8a-026150b61858,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Swamp,LCI,The Lost Caverns of Ixalan,397,normal,common,13,,4f893107-84b0-4e3f-b1f5-b04632f192c5,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Swiftfoot Boots,LCC,The Lost Caverns of Ixalan Commander,314,normal,uncommon,1,,a3b1da84-9c26-4c3c-b90f-43a0b2b20103,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Swords to Plowshares,LCC,The Lost Caverns of Ixalan Commander,137,normal,uncommon,1,,7cdee412-3519-4626-80ca-e3e431a604f0,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Tainted Field,LCC,The Lost Caverns of Ixalan Commander,356,normal,uncommon,1,,299b3b1d-4c31-4701-870e-15ee1ef85cd2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Talisman of Hierarchy,LCC,The Lost Caverns of Ixalan Commander,315,normal,uncommon,1,,16d49e21-dbe6-41da-b4b0-fd587e3326a5,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Temple of Silence,LCC,The Lost Caverns of Ixalan Commander,358,normal,rare,1,,dbd36bbb-2d0e-4d81-9646-b8263ef29a8e,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Temple of the False God,LCC,The Lost Caverns of Ixalan Commander,359,normal,uncommon,1,,96a31b2d-ee3f-48e5-b0dd-481a0c3efea2,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Timothar, Baron of Bats",LCC,The Lost Caverns of Ixalan Commander,210,normal,mythic,1,,7b01ecb8-02e2-4da2-8bf3-9c3753b23ba4,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Twilight Prophet,LCC,The Lost Caverns of Ixalan Commander,211,normal,mythic,1,,41f90e2b-cdbb-4a7c-aba0-c72055b414ed,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Unclaimed Territory,LCC,The Lost Caverns of Ixalan Commander,366,normal,uncommon,1,,e7bd3aaa-864c-4cbb-bbab-68d87c824e3d,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Utter End,LCC,The Lost Caverns of Ixalan Commander,292,normal,rare,1,,b7d2161e-8ef5-463d-a84f-966e4419fc6c,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Vault of the Archangel,LCC,The Lost Caverns of Ixalan Commander,367,normal,rare,1,,03a91bc2-bf45-45f3-8a14-911b6148720b,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Village Rites,LCC,The Lost Caverns of Ixalan Commander,212,normal,common,1,,2841339b-faef-407d-9838-d03fe80e6294,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Viscera Seer,LCC,The Lost Caverns of Ixalan Commander,213,normal,common,1,,486fd8a2-dd97-4082-84ef-4795c7e559a0,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Voldaren Estate,LCC,The Lost Caverns of Ixalan Commander,369,normal,rare,1,,1fcbc704-4fb3-49c3-9040-aa1681e86e2c,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Vona, Butcher of Magan",LCC,The Lost Caverns of Ixalan Commander,293,normal,mythic,1,,27beed9c-a42e-46de-8fbc-885da337ae75,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Wayfarer's Bauble,LCC,The Lost Caverns of Ixalan Commander,317,normal,common,1,,2eb513b3-9c9e-4837-8f58-67d698677041,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Welcoming Vampire,LCC,The Lost Caverns of Ixalan Commander,140,normal,rare,1,,2ea7710e-2eae-47e7-bcb1-3465f8b62728,,false,false,near_mint,en,AUD,
+Blood Rites,deck,Windbrisk Heights,LCC,The Lost Caverns of Ixalan Commander,370,normal,rare,1,,047f2401-d2dc-4bfd-a7fa-83ef1d825219,,false,false,near_mint,en,AUD,
+Blood Rites,deck,"Yahenni, Undying Partisan",LCC,The Lost Caverns of Ixalan Commander,214,normal,rare,1,,2b77cd68-fbdd-4bca-a68c-299425588a61,,false,false,near_mint,en,AUD,
+Eternal Might,deck,"Temmet, Naktamun's Will",DRC,Aetherdrift Commander,4,normal,mythic,1,,c0629894-0b72-4abe-9771-03becfdb241c,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Accursed Duneyard,DRC,Aetherdrift Commander,36,normal,rare,1,,7f288449-e9a8-444e-9639-fbcb742d2409,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Adarkar Wastes,DMU,Dominaria United,243,normal,rare,1,,08ae1037-6f70-41a9-b75e-98fa9a2152c8,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Angel of Sanctions,DRC,Aetherdrift Commander,62,normal,mythic,1,,546b6ffc-44e3-4994-b84b-6282c6474a1a,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Arcane Sanctum,PLST,The List,C18-232,normal,uncommon,1,,ed6aced0-6fa7-4881-bc90-f6003be5b05c,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Arcane Signet,SCD,Starter Commander Decks,257,normal,common,1,,02cb9420-fbfb-4123-a830-a992ff470db6,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Archfiend of Ifnir,DRC,Aetherdrift Commander,86,normal,rare,1,,9656903f-bd3e-4944-9f5f-f2d372a19f56,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Archghoul of Thraben,INR,Innistrad Remastered,95,normal,uncommon,1,,687b8e00-80f4-474b-927f-d208a2e8c205,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Ash Barrens,PLST,The List,CM2-235,normal,common,1,,6a0c7279-5dfb-4038-ac37-47b39b0340bf,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Binding Mummy,DRC,Aetherdrift Commander,63,normal,common,1,,5433a7a1-0602-4aa5-ae7e-815b105bc601,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Bontu's Monument,DRC,Aetherdrift Commander,124,normal,uncommon,1,,ba25bdf9-b6bf-4f4f-af37-8bfb84a74c97,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Cast Out,DRC,Aetherdrift Commander,64,normal,uncommon,1,,0d403ab1-56d1-44a6-a414-6cc7a114c62d,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Caves of Koilos,C20,Commander 2020,262,normal,rare,1,,6358592c-b6e8-4263-b96b-c548fdac5193,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Cemetery Reaper,DRC,Aetherdrift Commander,87,normal,rare,1,,b874f27a-2e10-4331-8f6d-fd3575be0885,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Champion of Wits,DRC,Aetherdrift Commander,72,normal,rare,1,,cf76d414-9424-4fd5-a1ff-2ff345ad6b0a,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Command Tower,ELD,Throne of Eldraine,333,normal,common,1,,ec1f1041-f667-4b73-b1f2-e5bcae84095e,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Corpse Knight,DRC,Aetherdrift Commander,50,normal,uncommon,1,,8859c03c-6c75-402f-9870-d4067a4ec4ed,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Crowded Crypt,DRC,Aetherdrift Commander,88,normal,rare,1,,d6539667-d082-4f8e-919a-c1882545baea,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Cryptbreaker,DRC,Aetherdrift Commander,41,normal,rare,1,,a3364105-68e9-45b5-874a-5c273d10f3f9,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Cryptcaller Chariot,DFT,Aetherdrift,80,normal,rare,1,,a0c8259c-055e-4bff-b945-c0ecb057a8f0,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Damn,DRC,Aetherdrift Commander,89,normal,rare,1,,1b25c224-4531-4fdc-9845-6663eaf60540,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Desert of the Glorified,HOU,Hour of Devastation,171,normal,common,1,,04a19aea-209d-4354-8c59-d08244185eb8,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Desert of the Mindful,HOU,Hour of Devastation,173,normal,common,1,,91b92d87-776c-490f-9ff1-234e47145df8,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Desert of the True,HOU,Hour of Devastation,174,normal,common,1,,e2d9308c-8af4-4587-b740-aea874d5ccae,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Despark,DRC,Aetherdrift Commander,115,normal,uncommon,1,,8555d8c1-ef77-4471-8fbf-22bb16d0f040,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Dimir Signet,DRC,Aetherdrift Commander,129,normal,uncommon,1,,6173d331-1dd9-47e0-bb9c-5655b179737f,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Dread Summons,DRC,Aetherdrift Commander,90,normal,rare,1,,4d1c1c36-869c-4964-a185-7a9c3a043b2d,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Dreadhorde Invasion,DRC,Aetherdrift Commander,91,normal,rare,1,,ccd2fc83-7fbe-45c4-a5f3-18a105ce6f09,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Drowned Catacomb,DRC,Aetherdrift Commander,152,normal,rare,1,,6b4097eb-a1e5-4560-80d8-11bb5628dd0d,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Dying to Serve,VOW,Innistrad: Crimson Vow,109,normal,rare,1,,c2ea16cd-801e-478a-b924-5431582b70d1,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Eternal Skylord,DRC,Aetherdrift Commander,76,normal,uncommon,1,,ab5b3aba-8542-4157-b6b6-265611a2a52f,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Evolving Wilds,M20,Core Set 2020,246,normal,common,1,,ad0fa2fb-6770-4a81-b830-4acfa957655a,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Exotic Orchard,C19,Commander 2019,242,normal,rare,1,,23de2dc2-348f-4eeb-ae0c-dda422d654b0,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Fetid Pools,PIP,Fallout,265,normal,rare,1,,1ae00e88-0dfc-477a-a982-0187efe753f2,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Fleshbag Marauder,DRC,Aetherdrift Commander,92,normal,uncommon,1,,ea3ac95f-23ad-4b05-bfbd-5de667c78ddc,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Forgotten Creation,DRC,Aetherdrift Commander,77,normal,rare,1,,2ff3a5b6-b39a-45d0-a8f5-1447776bfe74,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Gate to the Afterlife,DRC,Aetherdrift Commander,130,normal,uncommon,1,,4949afaa-e512-4d2e-aeca-a3e4d37b1335,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Gempalm Polluter,DRC,Aetherdrift Commander,93,normal,common,1,,2001d23e-feae-4a91-917e-e239b1c2b17c,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Glacial Fortress,TDC,Tarkir: Dragonstorm Commander,367,normal,rare,1,,2ed2dd5e-f59a-4ce3-a50e-968a1e94f59c,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Gleaming Overseer,DRC,Aetherdrift Commander,116,normal,uncommon,1,,6369ff49-0b82-4722-b04f-ca5f529d1e82,,false,false,near_mint,en,AUD,
+Eternal Might,deck,God-Eternal Oketra,DRC,Aetherdrift Commander,66,normal,mythic,1,,6453140c-6588-41d8-b43f-1858d70d9761,,false,false,near_mint,en,AUD,
+Eternal Might,deck,God-Pharaoh's Gift,DRC,Aetherdrift Commander,131,normal,rare,1,,b34cdeff-f749-4609-93c8-21608106d099,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Grave Titan,DRC,Aetherdrift Commander,42,normal,mythic,1,,179c5a3a-ea17-46bb-9a61-18b31f4705a9,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Gravecrawler,DRC,Aetherdrift Commander,43,normal,rare,1,,08ef7130-5051-4e2c-b473-2dae3176078e,,false,false,near_mint,en,AUD,
+Eternal Might,deck,"Hashaton, Scarab's Fist",DRC,Aetherdrift Commander,1,normal,mythic,1,,02645651-cd55-4bd0-8a4d-fa257270a0e0,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Irrigated Farmland,C20,Commander 2020,282,normal,rare,1,,54065d26-39ae-412c-b60e-d22d7f3e78be,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Island,J25,Foundations Jumpstart,86,normal,common,4,,0e443748-edf1-4499-9507-3649dd57ee95,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Isolated Chapel,DRC,Aetherdrift Commander,162,normal,rare,1,,7b68c431-ad14-439b-9513-67479af8f2c2,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Kindred Discovery,CLB,Commander Legends: Battle for Baldur's Gate,565,foil,rare,1,,7f744b4e-18be-4d41-8ea5-eac47a32cfcf,,false,false,near_mint,en,AUD,
+Eternal Might,deck,"Liliana, Death's Majesty",PLST,The List,AKH-97,normal,mythic,1,,bdcaf0f0-3681-463c-b132-58056156bc6a,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Lord of the Accursed,DRC,Aetherdrift Commander,95,normal,uncommon,1,,15750fb6-4141-4ad9-937d-e18c76154a85,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Lost Monarch of Ifnir,DRC,Aetherdrift Commander,11,normal,rare,1,,cae37ab0-9d60-45e9-98cb-e7427e508bc5,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Midnight Reaper,DRC,Aetherdrift Commander,44,normal,rare,1,,33c16202-4d7f-449c-8b29-144b2a9fda9a,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Murderous Rider // Swift End,DRC,Aetherdrift Commander,45,normal,rare,1,,67ea8e53-aa22-42d1-bca4-64b0b0f0bbdb,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Necroduality,INR,Innistrad Remastered,365,normal,mythic,1,,aa88f80f-7411-4f66-bb45-90fb7bd54667,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Never // Return,DRC,Aetherdrift Commander,96,normal,rare,1,,f6bb09b1-d28a-48c1-9d97-11bec84afb5e,,false,false,near_mint,en,AUD,
+Eternal Might,deck,On Wings of Gold,DRC,Aetherdrift Commander,5,normal,rare,1,,d5e247d3-8542-4e6c-b256-5ae216eeceb0,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Orzhov Basilica,AFC,Forgotten Realms Commander,253,normal,uncommon,1,,fc063704-f0d3-46b5-9340-f80d431ce5dc,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Orzhov Signet,DRC,Aetherdrift Commander,134,normal,uncommon,1,,ca0d3984-fbb3-4661-a424-f79d2253e057,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Path of Ancestry,CMR,Commander Legends,353,normal,common,1,,1852c1e1-fbea-4b14-9927-4b1849f9b8a3,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Plague Belcher,DRC,Aetherdrift Commander,97,normal,rare,1,,26c3846a-b5a6-42ad-bcc0-96f2077b1b47,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Plains,J25,Foundations Jumpstart,81,normal,common,5,,a4446149-341b-449b-86e2-2b6b47b7a75e,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Prairie Stream,NCC,New Capenna Commander,421,normal,rare,1,,40e52996-863b-46ee-893a-6ecb29f23106,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Priest of the Crossing,DRC,Aetherdrift Commander,6,normal,rare,1,,f0740a86-84eb-4720-b4d7-c5f5e561ddc7,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Prophet of the Scarab,DRC,Aetherdrift Commander,9,normal,rare,1,,0208b947-78d9-45bd-855f-846d9a7c547d,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Reconnaissance Mission,MAR,Marvel Universe,59,normal,mythic,1,,875dfbf5-9313-439b-b021-8b92d898baa4,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Renewed Solidarity,DRC,Aetherdrift Commander,7,normal,rare,1,,9a72b230-dbb0-4d38-ba7a-fb0bd03b6c47,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Rhet-Tomb Mystic,DRC,Aetherdrift Commander,10,normal,rare,1,,131a68e6-09ee-4afd-a0e1-d63bbc0775e8,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Rooftop Storm,PLST,The List,ISD-71,normal,rare,1,,3fe2c09a-584d-434b-92a4-cb75c69719c7,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Rot Hulk,DRC,Aetherdrift Commander,98,normal,mythic,1,,83b0c93a-d1f7-4694-990b-6c2c70648bbc,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Sol Ring,DRC,Aetherdrift Commander,56,normal,uncommon,1,,fe202721-c5be-46de-9fb3-ac18c699e10d,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Sunken Hollow,C20,Commander 2020,318,normal,rare,1,,bba559bc-dcbf-41a1-b5c0-e1fc850d657b,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Swamp,J25,Foundations Jumpstart,89,normal,common,5,,02fe3fdf-1d21-4e35-b0f3-3bcde7b05e23,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Swords to Plowshares,DRC,Aetherdrift Commander,37,normal,uncommon,1,,3b701a88-6074-476f-b87c-9a6d5d22c414,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Talisman of Dominance,MIC,Midnight Hunt Commander,164,normal,uncommon,1,,56f62d84-f62f-4363-a99e-fe5387c3d77e,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Talisman of Hierarchy,MH1,Modern Horizons,233,normal,uncommon,1,,826f99c7-f534-4183-8f0d-efe1609808ac,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Temple of Deceit,SCD,Starter Commander Decks,324,normal,rare,1,,5f94415c-369f-4ebd-8e6a-f027ede114e8,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Temple of Silence,M21,Core Set 2021,255,normal,rare,1,,0f5b0f0a-dc16-45e2-91ab-28e0b9f66d00,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Terramorphic Expanse,CM2,Commander Anthology Volume II,273,normal,common,1,,9e612d81-f388-42c3-b5d5-7bcaf46ace47,,false,false,near_mint,en,AUD,
+Eternal Might,deck,The Scarab God,DRC,Aetherdrift Commander,120,normal,mythic,1,,7546b37d-c83a-4632-bebf-cc46d114481f,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Timeless Dragon,DRC,Aetherdrift Commander,67,normal,rare,1,,21070f13-42b3-40c6-8909-25337be6ea6d,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Undead Augur,DRC,Aetherdrift Commander,100,normal,uncommon,1,,5d86f1a9-7c51-4456-b1d9-7fe82f073929,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Underground River,M3C,Modern Horizons 3 Commander,400,normal,rare,1,,5045f269-d931-4786-b7aa-4e0b1db1cd26,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Unholy Grotto,DRC,Aetherdrift Commander,182,normal,rare,1,,e29031f5-19c7-49d7-bd05-01d151592f4a,,false,false,near_mint,en,AUD,
+Eternal Might,deck,"Varina, Lich Queen",2X2,Double Masters 2022,291,normal,rare,1,,f1caccc8-4f33-4ae3-a09a-b41b9c4663a1,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Vizier of Many Faces,DRC,Aetherdrift Commander,84,normal,rare,1,,b8385f76-3057-4f8f-af84-f70214364870,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Wayward Servant,DRC,Aetherdrift Commander,121,normal,uncommon,1,,65475db4-ea0f-4ef3-ac2f-18e308c64682,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Wonder,TDC,Tarkir: Dragonstorm Commander,170,normal,uncommon,1,,567abd78-d4a3-4a33-9b5b-b5ca361059cc,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Zombie Master,DRC,Aetherdrift Commander,46,normal,rare,1,,8ba84f22-a78a-4a05-905d-a1e6f932350c,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Commander's Sphere,CM2,Commander Anthology Volume II,182,normal,common,1,,559da16a-d68e-4e92-8870-b4759d3bba84,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Commence the Endgame,WAR,War of the Spark,45,normal,rare,1,,209d70a2-c8c1-4072-ab1f-57804b55a09a,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Corpse Augur,CMA,Commander Anthology,52,normal,uncommon,1,,1b21cd81-9205-4f08-9ec3-478ce7e0ea82,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Dusk // Dawn,NCC,New Capenna Commander,198,normal,rare,1,,db0a5840-cbf7-4899-932b-8bdcbbf2e5f8,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Lazotep Chancellor,MH2,Modern Horizons 2,203,normal,uncommon,1,,82e68f3d-ef94-4651-a256-c72017f64b21,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Maskwood Nexus,PKHM,Kaldheim Promos,240p,normal,rare,1,,7bbcf127-8612-4569-a618-34507300d2ce,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Pull from Tomorrow,CLB,Commander Legends: Battle for Baldur's Gate,731,normal,rare,1,,d3d91bf6-25c7-4478-854a-e35290b6b049,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Twisted Abomination,EMA,Eternal Masters,110,normal,common,1,,a1335db4-dda0-4947-9ab6-1f140a1a8aa8,,false,false,near_mint,en,AUD,
+Eternal Might,deck,Wizened Mentor,DRC,Aetherdrift Commander,8,normal,rare,1,,f903afd3-01b5-4892-bd78-8da1d2f36252,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,"Sauron, Lord of the Rings",LTC,Tales of Middle-earth Commander,4,normal,mythic,1,,fc53dec0-79fe-4f6f-9d5b-cf298588e808,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Anger,LTC,Tales of Middle-earth Commander,210,normal,uncommon,1,,59773a37-371f-44b8-9418-9d9a875b992c,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Animate Dead,5ED,Fifth Edition,140,normal,uncommon,1,,1f2cd314-8f99-4443-ae86-a967effc7490,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Arcane Denial,LTC,Tales of Middle-earth Commander,184,normal,common,1,,7e0cc18d-c6b8-4db1-ac07-0f17ae6d6c95,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Arcane Signet,LTC,Tales of Middle-earth Commander,273,normal,common,1,,4e92354d-c203-41e1-822d-8263fadd9eb3,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Basalt Monolith,LTC,Tales of Middle-earth Commander,274,normal,uncommon,1,,97d8dbc9-d9f3-4e8e-95d2-27917c152a29,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Bitter Downfall,LTR,The Lord of the Rings: Tales of Middle-earth,77,normal,uncommon,1,,e4b83aa1-33ce-4b8d-ae5a-72f64eef5f09,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Blasphemous Act,LTC,Tales of Middle-earth Commander,211,normal,rare,1,,cf9e842f-4840-49e3-b4f3-c2fad395d41a,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Boon of the Wish-Giver,LTC,Tales of Middle-earth Commander,185,normal,uncommon,1,,bf2fa3fd-f6d9-4c23-9025-9b8b72da32dc,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Call of the Ring,LTR,The Lord of the Rings: Tales of Middle-earth,79,normal,rare,1,,a92a2c5a-e450-494a-b23b-7ac0a6c50535,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Cavern-Hoard Dragon,LTC,Tales of Middle-earth Commander,31,normal,rare,1,,c67e509e-a219-4f7f-b7eb-8c446cc0620a,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Choked Estuary,FIC,Final Fantasy Commander,379,normal,rare,1,,d9cf2b77-afb0-4c21-bc23-6942ec292035,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Command Tower,ELD,Throne of Eldraine,333,normal,common,1,,ec1f1041-f667-4b73-b1f2-e5bcae84095e,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Commander's Sphere,LTC,Tales of Middle-earth Commander,276,normal,common,1,,6620b4a3-fa33-4bd7-9180-314919d8ea2a,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Consider,LTC,Tales of Middle-earth Commander,187,normal,common,1,,1668af50-abd3-4b12-974a-b19fd010dc3e,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Corsairs of Umbar,LTC,Tales of Middle-earth Commander,19,normal,rare,1,,159727a9-0bc4-497d-8fb2-4a66923726d8,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Crumbling Necropolis,PLST,The List,C17-244,normal,uncommon,1,,63e44395-9703-4e8b-ac13-5f0daabb6477,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Decree of Pain,LTC,Tales of Middle-earth Commander,199,normal,rare,1,,4dd53069-bf38-4358-95b7-6fd738aaeeab,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Desolate Lighthouse,UMA,Ultimate Masters,242,normal,rare,1,,9f12cfe8-76cf-4709-bdc4-62c059f4eebd,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Dragonskull Summit,LTC,Tales of Middle-earth Commander,304,normal,rare,1,,d0581897-7bdb-465e-ab52-9e656b9a5607,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Drowned Catacomb,DRC,Aetherdrift Commander,152,normal,rare,1,,6b4097eb-a1e5-4560-80d8-11bb5628dd0d,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Entomb,DMR,Dominaria Remastered,304,normal,rare,1,,750820a5-b03f-46ee-970a-b66845176853,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Everflowing Chalice,LTC,Tales of Middle-earth Commander,278,normal,uncommon,1,,156464e7-3bb1-465f-939c-a9d290dc3ebc,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Evolving Wilds,M20,Core Set 2020,246,normal,common,1,,ad0fa2fb-6770-4a81-b830-4acfa957655a,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Fact or Fiction,LTC,Tales of Middle-earth Commander,190,normal,uncommon,1,,74d189fc-48fe-40f5-ae56-34b4dfc068d0,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Faithless Looting,LTC,Tales of Middle-earth Commander,215,normal,common,1,,57102ba6-79ab-4487-a62a-926b30682421,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Feed the Swarm,LTC,Tales of Middle-earth Commander,200,normal,common,1,,029e2a27-46f2-44fa-ac7c-462c69feab95,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Field of Ruin,THB,Theros Beyond Death,242,normal,uncommon,1,,3e84e179-9d59-4d08-8a36-51ad2fc32ae3,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Foreboding Ruins,NCC,New Capenna Commander,403,normal,rare,1,,39fe4a43-22a9-4c05-8c57-bca3a61e935e,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Frostboil Snarl,M3C,Modern Horizons 3 Commander,344,normal,rare,1,,9800a62b-df61-4363-80ce-81815f279c18,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Goblin Dark-Dwellers,LTC,Tales of Middle-earth Commander,219,normal,rare,1,,cb2091cb-4c20-4210-9917-6632c1d39dc1,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,"Grishnákh, Brash Instigator",LTR,The Lord of the Rings: Tales of Middle-earth,134,normal,uncommon,1,,6385e769-f805-499d-9f47-494533362152,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Guttersnipe,LTC,Tales of Middle-earth Commander,220,normal,uncommon,1,,d1ade999-a59c-4594-a787-b68fbf90bbb2,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Hostage Taker,LTC,Tales of Middle-earth Commander,268,normal,rare,1,,183ae03f-ee62-4b5c-9f8f-16b21af8eaa0,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,In the Darkness Bind Them,LTC,Tales of Middle-earth Commander,58,normal,rare,1,,f7f7413b-0a65-4338-90eb-4b4c5462c21c,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Inferno Titan,LTC,Tales of Middle-earth Commander,223,normal,mythic,1,,db61b57c-b870-41af-87b7-037ec52fe063,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Island,J25,Foundations Jumpstart,86,normal,common,6,,0e443748-edf1-4499-9507-3649dd57ee95,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Knollspine Dragon,LTC,Tales of Middle-earth Commander,224,normal,rare,1,,20dcd98d-01c8-45be-97ed-993a73b01b9c,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Languish,LTC,Tales of Middle-earth Commander,202,normal,rare,1,,b4f5fc18-a62c-4771-9062-e7bb42bae7ff,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Lidless Gaze,LTC,Tales of Middle-earth Commander,59,normal,rare,1,,6937954b-353a-47ac-a0c0-f731fe3881a6,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Living Death,DDE,Duel Decks: Phyrexia vs. the Coalition,31,normal,rare,1,,902e75fd-f5d6-4102-9e9b-d8d05a97be86,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Lord of the Nazgûl,LTC,Tales of Middle-earth Commander,60,normal,rare,1,,41e3d118-8f97-4c68-acff-2f90a055af5b,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Merciless Executioner,LTC,Tales of Middle-earth Commander,204,normal,uncommon,1,,a034d73b-a511-4c02-946f-ea520f93a2a4,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Mind Stone,LTC,Tales of Middle-earth Commander,282,normal,uncommon,1,,23dd6cb6-31ee-467e-9f67-39046197bcb6,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Monstrosity of the Lake,LTC,Tales of Middle-earth Commander,22,normal,rare,1,,d72aa8fc-6808-4865-879e-417a300c40de,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Moria Scavenger,LTC,Tales of Middle-earth Commander,63,normal,rare,1,,ea926187-ac8e-4197-8fd4-ac6b8d818d83,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Mountain,J25,Foundations Jumpstart,90,normal,common,8,,a3a4da7d-a703-4f91-9ef7-ce269c0b63fb,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Nazgûl,LTR,The Lord of the Rings: Tales of Middle-earth,334,normal,uncommon,2,,5e9c9901-c329-4a68-96ab-f33d7c12aefe,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Nightscape Familiar,DMR,Dominaria Remastered,94,normal,common,1,,4cf1918f-ad58-4f62-bd8c-649919de0e75,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Notion Thief,LTC,Tales of Middle-earth Commander,270,normal,rare,1,,c7654035-7d5a-4897-af0e-429edebbb55b,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Orcish Siegemaster,LTC,Tales of Middle-earth Commander,33,normal,rare,1,,1e9f9869-0f43-4eac-892f-26cd8a614330,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Path of Ancestry,CMR,Commander Legends,353,normal,common,1,,1852c1e1-fbea-4b14-9927-4b1849f9b8a3,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Rampaging War Mammoth,LTC,Tales of Middle-earth Commander,34,normal,rare,1,,dc13dbf0-c0ff-4c76-96c6-d3ee88ab2fce,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Reanimate,LTC,Tales of Middle-earth Commander,206,normal,rare,1,,eee48ed0-3965-4bcc-8eee-bcd8f1607808,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Relic of Sauron,LTC,Tales of Middle-earth Commander,79,normal,rare,1,,175b3d28-5c74-4972-9b5c-5e39762c78f4,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Rogue's Passage,PLST,The List,C17-272,normal,uncommon,1,,bd7c49d3-a0c7-4df3-b732-53e4f562c201,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,"Saruman, the White Hand",LTC,Tales of Middle-earth Commander,8,normal,mythic,1,,6487ccbf-f6cd-45a6-8514-2c458b655ef2,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Scourge of the Throne,LTC,Tales of Middle-earth Commander,225,normal,mythic,1,,89b46f36-6115-4d86-82a3-9397a123091c,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,"Shelob, Dread Weaver",LTC,Tales of Middle-earth Commander,29,normal,rare,1,,83944c19-6f9b-4043-9eeb-1a4ca452f698,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Smoldering Marsh,VOC,Crimson Vow Commander,183,normal,rare,1,,c2cf99ba-19c4-4f03-901b-69b754b6c48a,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Sol Ring,LTC,Tales of Middle-earth Commander,284,normal,uncommon,1,,5805f64c-dd88-4e94-8f0a-a01dae67e3ba,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Subjugate the Hobbits,LTC,Tales of Middle-earth Commander,24,normal,rare,1,,6206d9f1-6a57-46a2-942f-6f20e33e5d6a,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Sulfur Falls,DRC,Aetherdrift Commander,173,normal,rare,1,,eb24d2b9-8683-454b-b911-d694202d1081,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Sulfurous Springs,M3C,Modern Horizons 3 Commander,381,normal,rare,1,,38c0d259-106c-4281-b96d-2747e00e521d,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Summons of Saruman,LTC,Tales of Middle-earth Commander,70,normal,rare,1,,cbb1bc1f-b1d6-4639-b892-9b1ff6ed65fb,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Sunken Hollow,C20,Commander 2020,318,normal,rare,1,,bba559bc-dcbf-41a1-b5c0-e1fc850d657b,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Swamp,J25,Foundations Jumpstart,89,normal,common,7,,02fe3fdf-1d21-4e35-b0f3-3bcde7b05e23,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Terramorphic Expanse,CM2,Commander Anthology Volume II,273,normal,common,1,,9e612d81-f388-42c3-b5d5-7bcaf46ace47,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,The Balrog of Moria,LTC,Tales of Middle-earth Commander,46,normal,rare,1,,2a3fcfdc-f2cf-42d8-8bb4-7308bc12746e,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,The Black Gate,LTC,Tales of Middle-earth Commander,80,normal,rare,1,,46418186-c215-47c4-9d0a-d15a1d8ca613,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,The Mouth of Sauron,LTR,The Lord of the Rings: Tales of Middle-earth,216,normal,uncommon,1,,76a88814-aa30-4297-b338-3d851bfe7256,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Thrill of Possibility,LTC,Tales of Middle-earth Commander,229,normal,common,1,,7f81cdab-2a4e-4518-bfc3-7ccda8f2e806,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,"Too Greedily, Too Deep",LTC,Tales of Middle-earth Commander,72,normal,rare,1,,328b93f0-5078-4334-9c95-60ecdd17a388,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Treason of Isengard,LTR,The Lord of the Rings: Tales of Middle-earth,74,normal,common,1,,71f97505-c961-4890-acd0-32a63919ac2a,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Treasure Nabber,LTC,Tales of Middle-earth Commander,230,normal,rare,1,,27822718-27eb-484d-94b9-55fbe3fc03cc,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Troll of Khazad-dûm,LTR,The Lord of the Rings: Tales of Middle-earth,111,normal,common,1,,a6539e26-b63b-4725-9407-caaf451de084,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Underground River,M3C,Modern Horizons 3 Commander,400,normal,rare,1,,5045f269-d931-4786-b7aa-4e0b1db1cd26,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Victimize,SCD,Starter Commander Decks,118,normal,uncommon,1,,6f5e8449-f643-41b4-977f-45a6f62546d4,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Voracious Fell Beast,LTR,The Lord of the Rings: Tales of Middle-earth,113,normal,uncommon,1,,d9b7d7f8-503d-4660-9a18-6a8e2fcaa25f,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Wake the Dragon,LTC,Tales of Middle-earth Commander,74,normal,rare,1,,f9cf5f78-0316-4c35-a40e-9bfba2e46ad8,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Worn Powerstone,LTC,Tales of Middle-earth Commander,293,normal,uncommon,1,,329342a8-5708-4332-868a-7410d7461647,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Deep Analysis,PLST,The List,EMA-45,normal,common,1,,7b576264-da33-4272-98cf-70d1af1105b1,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Extract from Darkness,ZNC,Zendikar Rising Commander,90,normal,uncommon,1,,cbf32d5c-8d86-4e38-8d70-9ec369edac6e,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Fiery Inscription,LTR,The Lord of the Rings: Tales of Middle-earth,126,normal,uncommon,1,,8c321159-43e5-40fc-9f0c-4ecc4f6cfd20,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Forbidden Alchemy,PLST,The List,MM3-38,normal,common,1,,86fbd65c-544f-48fa-9697-4c3a147b01b1,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Goblin Cratermaker,GRN,Guilds of Ravnica,103,normal,uncommon,1,,86ecaedc-08f1-4de7-aae8-056df57940e0,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,"Gríma, Saruman's Footman",LTC,Tales of Middle-earth Commander,57,normal,rare,1,,00f40514-d37d-423f-aa0c-1875300f43a8,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Revenge of Ravens,ELD,Throne of Eldraine,104,normal,uncommon,1,,3474289a-193e-452d-b248-e53ee99e22c0,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Shiny Impetus,C20,Commander 2020,55,normal,uncommon,1,,0aa80931-0501-4712-a11b-563a3cd1e1c9,,false,false,near_mint,en,AUD,
+Hosts of Mordor,deck,Siege-Gang Commander,DOM,Dominaria,143,normal,rare,1,,f59ff087-97e7-4946-871f-1833abb2558a,,false,false,near_mint,en,AUD,
