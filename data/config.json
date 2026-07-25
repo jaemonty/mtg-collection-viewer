@@ -1,0 +1,20 @@
+{
+  "currency": "AUD",
+  "highValueThreshold": 20,
+  "recentDays": 90,
+  "franchises": {
+    "Lord of the Rings": ["LTR", "LTC", "LTCF"],
+    "Marvel": ["SPM", "FIN"],
+    "Spider-Man": ["SPM"],
+    "Avatar": ["TLA", "TLE"],
+    "Strixhaven": ["STX", "STA", "C21"]
+  },
+  "privacyDefaults": {
+    "hidePurchasePrices": false,
+    "hideTotalCollectionValue": false,
+    "hideBinderNames": false,
+    "disableTradeBinder": false,
+    "disableWishlist": false,
+    "disablePublicDeckPages": false
+  }
+}

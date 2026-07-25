@@ -153,6 +153,9 @@ function renderCardHTML(card, nameCounts = {}) {
   const keywordTags = (card.keywords || []).slice(0, 3).map(k => `<span class="badge keyword-badge clickable" data-filter="keyword" data-value="${k}">${k}</span>`).join('');
   const duplicateKey = card.oracle_id || card.name;
   const hasDuplicateName = nameCounts[duplicateKey] > 1; // More than 1 card entry with same oracle_id/name
+  let displaySettings = {};
+  try { displaySettings = JSON.parse(localStorage.getItem('mtg-dashboard-settings') || '{}'); } catch (_) {}
+  const market = window.MTGCollectionCore?.marketPrice(card) || 0;
   return `
   <div class="card ${foilClass}" data-scryfall-id="${card.scryfallId}">
     <a href="detail.html?id=${card.scryfallId}" class="card-link">
@@ -167,6 +170,12 @@ function renderCardHTML(card, nameCounts = {}) {
         <div class="card-value">${formatPrice(getCardPrice(card) * card.quantity, getCardCurrency(card))}</div>
       </div>
       <div class="card-set clickable" data-filter="set" data-value="${card.setName}"><img src="${setIcon}" class="set-icon" alt="${card.setCode}" onerror="this.src='${fallbackIcon}'">${card.setName}</div>
+      <div class="card-printing">${card.setCode} #${card.collectorNumber}${card.condition ? ` · ${card.condition.replaceAll('_', ' ')}` : ''}${card.language ? ` · ${card.language.toUpperCase()}` : ''}</div>
+      ${!displaySettings.hideBinderNames && card.binderName ? `<div class="card-binder">${card.binderName}</div>` : ''}
+      <div class="card-price-split">
+        ${displaySettings.hidePurchasePrices ? '' : `<span>Paid ${formatPrice(card.purchasePrice * card.quantity, card.currency)}</span>`}
+        <span>Market ${market ? formatPrice(market * card.quantity, 'USD') : 'unavailable'}</span>
+      </div>
       <div class="card-details">
         <span class="badge rarity-${card.rarity} clickable" data-filter="rarity" data-value="${card.rarity}">${card.rarity}</span>
         ${card.foil !== 'normal' ? `<span class="badge foil-${card.foil} clickable" data-filter="foil" data-value="${card.foil}">${card.foil}</span>` : ''}
@@ -430,7 +439,7 @@ async function fetchWithFallback(paths) {
 async function loadCollection() {
   const response = await fetchWithFallback(['data/Collection.csv', 'data/collection.csv']);
   if (!response.ok) {
-    console.error('Failed to load Collection.csv:', response.status);
+    showCollectionStatus('error', 'Collection.csv could not be loaded. Add a ManaBox export at data/Collection.csv and reload.');
     collection = [];
     filteredCollection = [];
     setupPriceSlider();
@@ -439,46 +448,17 @@ async function loadCollection() {
     return collection;
   }
   const text = await response.text();
-  const lines = text.replace(/\r/g, '').split('\n');
-  const headerLine = lines[0];
-  const headers = parseCSVLine(headerLine).map(h => h.trim().toLowerCase());
-  
-  // Map column names to indices (supports different CSV formats)
-  const col = {
-    name: headers.findIndex(h => h === 'name'),
-    setCode: headers.findIndex(h => h === 'set code' || h === 'edition code' || h === 'set'),
-    setName: headers.findIndex(h => h === 'set name' || h === 'edition'),
-    collectorNumber: headers.findIndex(h => h === 'collector number' || h === 'card number'),
-    foil: headers.findIndex(h => h === 'foil'),
-    rarity: headers.findIndex(h => h === 'rarity'),
-    quantity: headers.findIndex(h => h === 'quantity' || h === 'count'),
-    scryfallId: headers.findIndex(h => h === 'scryfall id'),
-    price: headers.findIndex(h => h === 'price' || h === 'purchase price'),
-    condition: headers.findIndex(h => h === 'condition'),
-    language: headers.findIndex(h => h === 'language'),
-    currency: headers.findIndex(h => h === 'currency' || h === 'purchase price currency')
-  };
-  
-  collection = lines.slice(1)
-    .filter(line => line.trim())
-    .map(line => {
-      const parts = parseCSVLine(line);
-      return {
-        name: parts[col.name] || '',
-        setCode: parts[col.setCode] || '',
-        setName: parts[col.setName] || '',
-        collectorNumber: parts[col.collectorNumber] || '',
-        foil: parts[col.foil] || 'normal',
-        rarity: parts[col.rarity] || 'common',
-        quantity: parseInt(parts[col.quantity]) || 1,
-        scryfallId: parts[col.scryfallId] || '',
-        price: parseFloat(parts[col.price]) || 0,
-        condition: parts[col.condition] || '',
-        language: parts[col.language] || '',
-        currency: parts[col.currency] || 'USD'
-      };
-    })
-    .filter(card => card.name && card.scryfallId);
+  const parsed = window.MTGCollectionCore.parseManaBoxCSV(text, { defaultCurrency: 'AUD' });
+  if (parsed.errors.length) {
+    showCollectionStatus('error', parsed.errors.join(' '));
+    collection = []; filteredCollection = [];
+    setupPriceSlider(); updateStats();
+    if (typeof onCollectionLoaded === 'function') onCollectionLoaded();
+    return collection;
+  }
+  collection = parsed.cards;
+  showCollectionStatus(parsed.warnings.length ? 'warning' : 'success',
+    parsed.warnings.length ? parsed.warnings.join(' ') : `${collection.length} owned card versions loaded.`);
   
   maxPriceValue = Math.ceil(Math.max(...collection.map(c => c.price)));
   setupPriceSlider();
@@ -514,6 +494,14 @@ async function loadCollection() {
   }
   
   return collection;
+}
+
+function showCollectionStatus(kind, message) {
+  const target = document.getElementById('collection-status');
+  if (!target) return;
+  target.className = `collection-status ${kind}`;
+  target.textContent = message;
+  target.hidden = false;
 }
 
 function setupPriceSlider() {
