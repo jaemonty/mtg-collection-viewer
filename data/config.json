@@ -1,7 +1,10 @@
 {
   "currency": "AUD",
+  "fallbackUsdToAudRate": 1.5346,
   "highValueThreshold": 20,
   "recentDays": 90,
+  "requesterName": "",
+  "tradeBinderTerms": ["trade", "trades", "trade binder", "for trade"],
   "franchises": {
     "Lord of the Rings": ["LTR", "LTC", "LTCF"],
     "Marvel": ["SPM", "FIN"],

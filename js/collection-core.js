@@ -121,6 +121,12 @@
     return number(raw);
   }
 
+  function convertUsdToAud(usd, rate) {
+    const amount = number(usd);
+    const multiplier = number(rate);
+    return multiplier > 0 ? amount * multiplier : 0;
+  }
+
   function calculateTotals(cards) {
     const list = cards || [];
     const quantity = list.reduce((sum, card) => sum + card.quantity, 0);
@@ -163,5 +169,224 @@
     return { results, required: results.reduce((s, r) => s + r.quantity, 0), missing: results.reduce((s, r) => s + r.missing, 0) };
   }
 
-  return { FIELD_ALIASES, parseCSV, buildColumnMap, parseManaBoxCSV, calculateTotals, parseDeckList, matchDeckList, marketPrice, cleanFinish };
+  const normalize = value => String(value || '').trim().toLowerCase();
+  const slug = value => normalize(value).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  const SCRYFALL_CACHE_KEY = 'mtg-scryfall-cache-v1';
+  const SCRYFALL_CACHE_TTL = 60 * 60 * 1000;
+
+  function compactScryfallCard(card = {}) {
+    const face = item => ({
+      name: item.name, image_uris: item.image_uris, oracle_text: item.oracle_text,
+      type_line: item.type_line, colors: item.colors, artist: item.artist
+    });
+    return {
+      id: card.id, name: card.name, flavor_name: card.flavor_name,
+      type_line: card.type_line, oracle_text: card.oracle_text,
+      colors: card.colors, color_identity: card.color_identity, keywords: card.keywords,
+      legalities: card.legalities, image_uris: card.image_uris, prices: card.prices,
+      set: card.set, set_name: card.set_name, collector_number: card.collector_number,
+      rarity: card.rarity, artist: card.artist, scryfall_uri: card.scryfall_uri,
+      card_faces: Array.isArray(card.card_faces) ? card.card_faces.map(face) : undefined
+    };
+  }
+
+  function readCachedScryfall(ids = [], storage, now = Date.now()) {
+    try {
+      const target = storage || (typeof sessionStorage !== 'undefined' ? sessionStorage : null);
+      if (!target) return {};
+      const payload = JSON.parse(target.getItem(SCRYFALL_CACHE_KEY) || 'null');
+      if (!payload || now - Number(payload.savedAt) >= SCRYFALL_CACHE_TTL) {
+        target.removeItem(SCRYFALL_CACHE_KEY);
+        return {};
+      }
+      const wanted = new Set(ids);
+      return Object.fromEntries(Object.entries(payload.cards || {}).filter(([id]) => !wanted.size || wanted.has(id)));
+    } catch (_) { return {}; }
+  }
+
+  function cacheScryfallCards(cards = [], storage, now = Date.now()) {
+    try {
+      const target = storage || (typeof sessionStorage !== 'undefined' ? sessionStorage : null);
+      if (!target) return false;
+      const existing = readCachedScryfall([], target, now);
+      cards.filter(card => card?.id).forEach(card => { existing[card.id] = compactScryfallCard(card); });
+      target.setItem(SCRYFALL_CACHE_KEY, JSON.stringify({ savedAt: now, cards: existing }));
+      return true;
+    } catch (_) { return false; }
+  }
+
+  function makeCollectionItemId(card, ownerId) {
+    return [
+      ownerId || card.ownerId, card.scryfallId || normalize(card.name), card.setCode,
+      card.collectorNumber, card.foil, card.condition, card.language, card.binderName
+    ].map(slug).join('|');
+  }
+
+  function applyOwnerMetadata(cards, owner) {
+    return (cards || []).map(card => ({
+      ...card,
+      ownerId: owner.id,
+      ownerName: owner.name,
+      ownerShortName: owner.shortName || owner.name,
+      ownerBadgeClass: owner.badgeClass || `owner-${owner.id}`,
+      collectionItemId: makeCollectionItemId(card, owner.id)
+    }));
+  }
+
+  function groupCardsByName(cards) {
+    const groups = new Map();
+    (cards || []).forEach(card => {
+      const key = normalize(card.oracleName || card.name);
+      if (!groups.has(key)) groups.set(key, {
+        key, name: card.oracleName || card.name, representative: card, records: [],
+        quantity: 0, foilCount: 0, owners: new Map(), printings: new Set()
+      });
+      const group = groups.get(key);
+      group.records.push(card);
+      group.quantity += card.quantity;
+      if (card.foil !== 'normal') group.foilCount += card.quantity;
+      group.owners.set(card.ownerId, (group.owners.get(card.ownerId) || 0) + card.quantity);
+      group.printings.add([card.setCode, card.collectorNumber, card.foil].join('|'));
+    });
+    return [...groups.values()].map(group => ({
+      ...group,
+      ownerCount: group.owners.size,
+      printingCount: group.printings.size,
+      owners: Object.fromEntries(group.owners)
+    }));
+  }
+
+  function groupIdenticalCopies(cards) {
+    const groups = new Map();
+    (cards || []).forEach(card => {
+      const key = [
+        card.scryfallId || normalize(card.oracleName || card.name),
+        normalize(card.setCode), normalize(card.collectorNumber),
+        normalize(card.foil), normalize(card.language), normalize(card.condition)
+      ].join('|');
+      if (!groups.has(key)) groups.set(key, {
+        key,
+        name: card.displayName || card.flavorName || card.name,
+        representative: card, records: [], quantity: 0, foilCount: 0,
+        owners: new Map(), printings: new Set()
+      });
+      const group = groups.get(key);
+      group.records.push(card);
+      group.quantity += card.quantity;
+      if (card.foil !== 'normal') group.foilCount += card.quantity;
+      group.owners.set(card.ownerId, (group.owners.get(card.ownerId) || 0) + card.quantity);
+      group.printings.add([card.setCode, card.collectorNumber, card.foil].join('|'));
+    });
+    return [...groups.values()].map(group => ({
+      ...group,
+      ownerCount: group.owners.size,
+      printingCount: group.printings.size,
+      owners: Object.fromEntries(group.owners)
+    }));
+  }
+
+  function isLikelyTradeBinder(card, terms = []) {
+    const binder = normalize(card.binderName);
+    return !!binder && terms.some(term => binder.includes(normalize(term)));
+  }
+
+  function cardSearchText(card) {
+    return [
+      card.name, card.displayName, card.flavorName, card.oracleName,
+      card.setName, card.setCode, card.collectorNumber, card.type_line,
+      card.oracle_text, card.binderName, card.ownerName, card.ownerShortName
+    ].map(normalize).join(' ');
+  }
+
+  function filterCards(cards, filters = {}, options = {}) {
+    const ownerIds = new Set(filters.ownerIds || []);
+    const binders = new Set(filters.binders || []);
+    const search = normalize(filters.search);
+    const setSearch = normalize(filters.set);
+    const minQuantity = Math.max(1, Number(filters.minQuantity) || 1);
+    const totalOwners = options.totalOwners || 0;
+    const groupTotals = options.groupTotals || new Map();
+    return (cards || []).filter(card => {
+      const group = groupTotals.get(normalize(card.oracleName || card.name));
+      const colors = card.colors || card.card_faces?.[0]?.colors || [];
+      const color = filters.color;
+      const typeLine = card.type_line || '';
+      if (search && !cardSearchText(card).includes(search)) return false;
+      if (ownerIds.size && !ownerIds.has(card.ownerId)) return false;
+      if (filters.rarity && card.rarity !== filters.rarity) return false;
+      if (filters.finish && card.foil !== filters.finish) return false;
+      if (filters.condition && normalize(card.condition) !== normalize(filters.condition)) return false;
+      if (binders.size && !binders.has(card.binderName)) return false;
+      if (setSearch && !normalize(`${card.setName} ${card.setCode}`).includes(setSearch)) return false;
+      if (filters.type && !typeLine.toLowerCase().includes(filters.type.toLowerCase())) return false;
+      const creatureTypes = normalize(typeLine.split('—').slice(1).join(' '));
+      if (filters.creatureType && !creatureTypes.includes(normalize(filters.creatureType))) return false;
+      if (color === 'C' && colors.length) return false;
+      if (color === 'M' && colors.length < 2) return false;
+      if (color && !['C', 'M'].includes(color) && !(colors.length === 1 && colors[0] === color)) return false;
+      if (card.quantity < minQuantity) return false;
+      if (filters.duplicates && (group?.quantity || card.quantity) <= 1) return false;
+      if (filters.ownerCount && (group?.ownerCount || 1) < Number(filters.ownerCount)) return false;
+      if (filters.ownedByEveryone && (group?.ownerCount || 1) < totalOwners) return false;
+      if (filters.legendary && !/\bLegendary\b/i.test(typeLine)) return false;
+      if (filters.commander && !(/\bLegendary\b.*\bCreature\b/i.test(typeLine) || /can be your commander/i.test(card.oracle_text || ''))) return false;
+      if (filters.token === 'tokens' && !/\bToken\b/i.test(typeLine)) return false;
+      if (filters.token === 'nontokens' && /\bToken\b/i.test(typeLine)) return false;
+      if (filters.tradeOnly && !isLikelyTradeBinder(card, options.tradeBinderTerms || [])) return false;
+      return true;
+    });
+  }
+
+  function addBasketItem(items, record, requested = 1, note = '') {
+    const list = Array.isArray(items) ? items.map(item => ({ ...item })) : [];
+    const quantity = Math.max(1, Math.min(Number(requested) || 1, record.quantity));
+    const existing = list.find(item => item.collectionItemId === record.collectionItemId);
+    if (existing) {
+      existing.quantityRequested = Math.min(existing.quantityOwned, existing.quantityRequested + quantity);
+      if (note) existing.note = note;
+      return list;
+    }
+    list.push({
+      collectionItemId: record.collectionItemId, ownerId: record.ownerId, ownerName: record.ownerName,
+      cardName: record.name, setCode: record.setCode, collectorNumber: record.collectorNumber,
+      finish: record.foil, condition: record.condition, binder: record.binderName,
+      quantityOwned: record.quantity, quantityRequested: quantity,
+      imageUri: record.imageUri || '', marketPrice: marketPrice(record), note
+    });
+    return list;
+  }
+
+  function removeBasketItem(items, collectionItemId) {
+    return (items || []).filter(item => item.collectionItemId !== collectionItemId);
+  }
+
+  function groupBasketByOwner(items) {
+    return (items || []).reduce((groups, item) => {
+      (groups[item.ownerId] ||= { ownerId: item.ownerId, ownerName: item.ownerName, items: [] }).items.push(item);
+      return groups;
+    }, {});
+  }
+
+  async function loadCollections(owners, fetchText) {
+    const successes = [], failures = [];
+    await Promise.all((owners || []).map(async owner => {
+      try {
+        const text = await fetchText(owner);
+        const parsed = parseManaBoxCSV(text);
+        if (parsed.errors.length) throw new Error(parsed.errors.join(' '));
+        successes.push({ owner, cards: applyOwnerMetadata(parsed.cards, owner), warnings: parsed.warnings });
+      } catch (error) {
+        failures.push({ owner, error: error.message || 'Collection not yet uploaded' });
+      }
+    }));
+    return { cards: successes.flatMap(result => result.cards), successes, failures };
+  }
+
+  return {
+    FIELD_ALIASES, parseCSV, buildColumnMap, parseManaBoxCSV, calculateTotals, parseDeckList,
+    matchDeckList, marketPrice, convertUsdToAud, cleanFinish, makeCollectionItemId, applyOwnerMetadata,
+    groupCardsByName, groupIdenticalCopies, filterCards, isLikelyTradeBinder, addBasketItem, removeBasketItem,
+    groupBasketByOwner, cardSearchText, loadCollections, compactScryfallCard,
+    readCachedScryfall, cacheScryfallCards, SCRYFALL_CACHE_TTL
+  };
 });
