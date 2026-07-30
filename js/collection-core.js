@@ -308,8 +308,7 @@
     const groupTotals = options.groupTotals || new Map();
     return (cards || []).filter(card => {
       const group = groupTotals.get(normalize(card.oracleName || card.name));
-      const colors = card.colors || card.card_faces?.[0]?.colors || [];
-      const color = filters.color;
+      const colors = card.color_identity || card.colors || card.card_faces?.[0]?.colors || [];
       const typeLine = card.type_line || '';
       if (search && !cardSearchText(card).includes(search)) return false;
       if (ownerIds.size && !ownerIds.has(card.ownerId)) return false;
@@ -321,9 +320,7 @@
       if (filters.type && !typeLine.toLowerCase().includes(filters.type.toLowerCase())) return false;
       const creatureTypes = normalize(typeLine.split('—').slice(1).join(' '));
       if (filters.creatureType && !creatureTypes.includes(normalize(filters.creatureType))) return false;
-      if (color === 'C' && colors.length) return false;
-      if (color === 'M' && colors.length < 2) return false;
-      if (color && !['C', 'M'].includes(color) && !(colors.length === 1 && colors[0] === color)) return false;
+      if (!matchesColorIdentity(colors, filters.colors || (filters.color ? [filters.color] : []), filters.colorMatch)) return false;
       if (card.quantity < minQuantity) return false;
       if (filters.duplicates && (group?.quantity || card.quantity) <= 1) return false;
       if (filters.ownerCount && (group?.ownerCount || 1) < Number(filters.ownerCount)) return false;
@@ -335,6 +332,30 @@
       if (filters.tradeOnly && !isLikelyTradeBinder(card, options.tradeBinderTerms || [])) return false;
       return true;
     });
+  }
+
+  function matchesColorIdentity(identity = [], selected = [], mode = 'contains') {
+    const actual = new Set((identity || []).map(value => String(value).toUpperCase()));
+    const wanted = new Set((selected || []).map(value => String(value).toUpperCase()).filter(Boolean));
+    if (!wanted.size) return true;
+    if (wanted.has('C')) {
+      if (wanted.size > 1) return false;
+      return actual.size === 0;
+    }
+    if (mode === 'exact' && actual.size !== wanted.size) return false;
+    return [...wanted].every(color => actual.has(color));
+  }
+
+  function encodeColorFilter(colors = [], mode = 'contains') {
+    const selected = [...new Set(colors)].filter(color => ['W', 'U', 'B', 'R', 'G', 'C'].includes(color));
+    return selected.length ? { colors: selected.join(','), match: mode === 'exact' ? 'exact' : 'contains' } : {};
+  }
+
+  function decodeColorFilter(params) {
+    const values = params?.getAll ? params.getAll('colors') : [];
+    const colors = [...new Set(values.flatMap(value => String(value).split(',')))]
+      .filter(color => ['W', 'U', 'B', 'R', 'G', 'C'].includes(color));
+    return { colors, match: params?.get?.('match') === 'exact' ? 'exact' : 'contains' };
   }
 
   function addBasketItem(items, record, requested = 1, note = '') {
@@ -385,7 +406,8 @@
   return {
     FIELD_ALIASES, parseCSV, buildColumnMap, parseManaBoxCSV, calculateTotals, parseDeckList,
     matchDeckList, marketPrice, convertUsdToAud, cleanFinish, makeCollectionItemId, applyOwnerMetadata,
-    groupCardsByName, groupIdenticalCopies, filterCards, isLikelyTradeBinder, addBasketItem, removeBasketItem,
+    groupCardsByName, groupIdenticalCopies, filterCards, matchesColorIdentity, encodeColorFilter, decodeColorFilter,
+    isLikelyTradeBinder, addBasketItem, removeBasketItem,
     groupBasketByOwner, cardSearchText, loadCollections, compactScryfallCard,
     readCachedScryfall, cacheScryfallCards, SCRYFALL_CACHE_TTL
   };

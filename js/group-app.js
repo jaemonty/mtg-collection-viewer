@@ -1,5 +1,7 @@
 (function () {
   const Core = window.MTGCollectionCore;
+  const Export = window.MTGCollectionExport;
+  const Explore = window.MTGExploreLinks;
   const state = {
     owners: [], cards: [], visible: [], groups: [], failures: [], metadata: new Map(),
     mode: localStorage.getItem('mtg-group-view') || 'grid',
@@ -9,6 +11,7 @@
     rateDate: localStorage.getItem('mtg-usd-aud-date') || 'fallback'
   };
   const basketKey = 'mtg-trade-basket-v1';
+  const exportScopeKey = 'mtg-export-scope-v1';
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   const params = new URLSearchParams(location.search);
@@ -141,7 +144,9 @@
   function filterState() {
     return {
       search: $('search').value, ownerIds: [...document.querySelectorAll('[name="owner"]:checked')].map(el => el.value),
-      color: $('color-filter').value, type: $('type-filter').value, creatureType: $('creature-type-filter').value, rarity: $('rarity-filter').value,
+      colors: [...document.querySelectorAll('[name="color"]:checked')].map(el => el.value),
+      colorMatch: document.querySelector('[name="color-match"]:checked')?.value || 'contains',
+      type: $('type-filter').value, creatureType: $('creature-type-filter').value, rarity: $('rarity-filter').value,
       finish: $('finish-filter').value, condition: $('condition-filter').value,
       binders: [...$('binder-filter').selectedOptions].map(option => option.value),
       set: $('set-filter').value.split(' — ')[0], minQuantity: $('quantity-filter').value,
@@ -154,14 +159,27 @@
   function saveFilters(filters) {
     const query = new URLSearchParams(currentOwner ? { owner: currentOwner } : {});
     Object.entries(filters).forEach(([key, value]) => {
-      if (Array.isArray(value)) value.forEach(item => query.append(key, item));
+      if (key === 'colors' && value.length) query.set('colors', Core.encodeColorFilter(value, filters.colorMatch).colors);
+      else if (key === 'colorMatch') {
+        if (filters.colors.length) query.set('match', value);
+      }
+      else if (Array.isArray(value)) value.forEach(item => query.append(key, item));
       else if (value && value !== '1') query.set(key, value === true ? '1' : value);
     });
     history.replaceState(null, '', `${location.pathname.split('/').pop()}${query.size ? `?${query}` : ''}`);
   }
   function restoreFilters() {
     const set = (id, key = id) => { const value = params.get(key); if (value != null && $(id)) $(id).value = value; };
-    set('search', 'search'); set('color-filter', 'color'); set('type-filter', 'type'); set('creature-type-filter', 'creatureType'); set('rarity-filter', 'rarity');
+    set('search', 'search'); set('type-filter', 'type'); set('creature-type-filter', 'creatureType'); set('rarity-filter', 'rarity');
+    const restoredColourFilter = Core.decodeColorFilter(params);
+    const restoredColors = restoredColourFilter.colors;
+    restoredColors.forEach(color => {
+      const control = document.querySelector(`[name="color"][value="${CSS.escape(color)}"]`);
+      if (control) control.checked = true;
+    });
+    const restoredMatch = restoredColourFilter.match;
+    const matchControl = document.querySelector(`[name="color-match"][value="${restoredMatch}"]`);
+    if (matchControl) matchControl.checked = true;
     set('finish-filter', 'finish'); set('condition-filter', 'condition'); set('quantity-filter', 'minQuantity');
     params.getAll('binders').forEach(value => {
       const option = [...$('binder-filter').options].find(item => item.value === value);
@@ -207,6 +225,7 @@
     if ($('sort').value === 'group-quantity') state.groups.sort((a,b)=>b.quantity-a.quantity);
     state.shown = state.pageSize;
     saveFilters(filters);
+    $('colour-filter-count').textContent = filters.colors.length ? `(${filters.colors.length})` : '';
     renderChips(filters);
     renderResults();
   }
@@ -215,7 +234,9 @@
     if (filters.search) chips.push(['Search', filters.search, 'search']);
     filters.ownerIds.forEach(id => chips.push(['Owner', state.owners.find(o=>o.id===id)?.shortName || id, 'ownerIds']));
     filters.binders.forEach(binder => chips.push(['Binder', binder, 'binders']));
-    [['color','Colour'],['type','Type'],['rarity','Rarity'],['finish','Finish'],['condition','Condition'],['set','Set']].forEach(([key,label]) => filters[key] && chips.push([label, filters[key], key]));
+    const colorNames = { W:'White', U:'Blue', B:'Black', R:'Red', G:'Green', C:'Colourless' };
+    filters.colors.forEach(color => chips.push(['', colorNames[color] || color, 'colors']));
+    [['type','Type'],['rarity','Rarity'],['finish','Finish'],['condition','Condition'],['set','Set']].forEach(([key,label]) => filters[key] && chips.push([label, filters[key], key]));
     if (filters.creatureType) chips.push(['Creature type', filters.creatureType, 'creatureType']);
     if (filters.minQuantity > 1) chips.push(['Quantity', `${filters.minQuantity}+`, 'minQuantity']);
     if (filters.duplicates) chips.push(['', 'Duplicates', 'duplicates']);
@@ -275,6 +296,9 @@
   function detailUrl(card) {
     return `detail.html?id=${encodeURIComponent(card.scryfallId || '')}&name=${encodeURIComponent(card.name)}`;
   }
+  function quickExploreButton(card) {
+    return `<div class="card-tile-header">${Explore.renderQuickButton({ primaryName: cardTitle(card) }, card.collectionItemId)}</div>`;
+  }
   function cardTitle(card) {
     return card.displayName || card.flavorName || card.name;
   }
@@ -291,6 +315,7 @@
     const card = group.representative;
     const market = marketAud(card);
     return `<article class="group-card">
+      ${quickExploreButton(card)}
       <a class="card-visual" href="${detailUrl(card)}"><img loading="lazy" src="${esc(imageUrl(card))}" alt="${esc(cardTitle(card))}"></a>
       <div class="group-card-body"><h2><a href="${detailUrl(card)}">${esc(cardTitle(card))}</a></h2>
       <div class="owner-badges">${ownerBadges(group)}</div>
@@ -304,7 +329,7 @@
     const owner = state.owners.find(item => item.id === card.ownerId);
     const trade = Core.isLikelyTradeBinder(card, state.config.tradeBinderTerms || []);
     const market = marketAud(card);
-    return `<article class="printing-card"><a class="card-visual" href="${detailUrl(card)}"><img loading="lazy" src="${esc(imageUrl(card))}" alt="${esc(cardTitle(card))}"></a>
+    return `<article class="printing-card">${quickExploreButton(card)}<a class="card-visual" href="${detailUrl(card)}"><img loading="lazy" src="${esc(imageUrl(card))}" alt="${esc(cardTitle(card))}"></a>
       <div><h2><a href="${detailUrl(card)}">${esc(cardTitle(card))}</a></h2><span class="owner-badge ${owner?.badgeClass || ''}">${esc(card.ownerShortName)} ×${card.quantity}</span>
       ${card.flavorName && card.oracleName ? `<p class="oracle-name-line">Original card: ${esc(card.oracleName)}</p>` : ''}
       <p class="card-set-line">${esc(card.setName || card.setCode)} · ${esc(card.setCode)} #${esc(card.collectorNumber)}</p>
@@ -313,6 +338,7 @@
       <div class="preview-tags">${cardTags(card)}</div></div></article>`;
   }
   function renderResults() {
+    closeQuickExplore();
     const grouped = state.grouping !== 'printing';
     const items = grouped ? state.groups : state.visible;
     const quantity = state.visible.reduce((sum, card) => sum + card.quantity, 0);
@@ -322,12 +348,14 @@
     $('results').innerHTML = items.slice(0, state.shown).map(grouped ? groupCard : printingCard).join('') ||
       `<div class="empty-state"><h2>No cards match these filters</h2><p>Add the searched card to your Shopping List, or reset the filters.</p><a class="button-link" href="trade-basket.html?shopping=${encodeURIComponent($('search').value)}">Add to Shopping List</a><button type="button" data-clear>Clear Filters</button></div>`;
     $('load-more').hidden = state.shown >= items.length;
+    updateExportPanel();
     const failures = state.failures.map(f => `<li><strong>${esc(f.owner.name)}:</strong> ${esc(f.error)}</li>`).join('');
     $('load-errors').innerHTML = failures ? `<details><summary>${state.failures.length} collection${state.failures.length === 1 ? '' : 's'} unavailable</summary><ul>${failures}</ul></details>` : '';
   }
   function clearFilters() {
     document.querySelectorAll('#filters input').forEach(el => { if (el.type === 'checkbox') el.checked = false; else el.value = el.type === 'number' ? 1 : ''; });
     document.querySelectorAll('#filters select').forEach(el => el.selectedIndex = 0);
+    document.querySelector('[name="color-match"][value="contains"]').checked = true;
     $('search').value = ''; applyFilters();
   }
   function removeFilter(key, value) {
@@ -340,6 +368,10 @@
     if (key === 'ownerIds') {
       const owner = state.owners.find(item => item.shortName === value || item.id === value);
       const control = owner && document.querySelector(`[name="owner"][value="${CSS.escape(owner.id)}"]`);
+      if (control) control.checked = false;
+    } else if (key === 'colors') {
+      const colorCodes = { White:'W', Blue:'U', Black:'B', Red:'R', Green:'G', Colourless:'C' };
+      const control = document.querySelector(`[name="color"][value="${colorCodes[value] || CSS.escape(value)}"]`);
       if (control) control.checked = false;
     } else if (key === 'binders') {
       const option = [...$('binder-filter').options].find(item => item.value === value);
@@ -366,6 +398,139 @@
     announce(`${card.name} added to the Trade Basket.`);
   }
   function announce(message) { $('live-region').textContent = message; }
+  function ensureQuickExploreMenu() {
+    if ($('quick-explore-menu')) return $('quick-explore-menu');
+    document.body.insertAdjacentHTML('beforeend', '<div id="quick-explore-menu" class="quick-explore-menu" role="menu" hidden></div>');
+    return $('quick-explore-menu');
+  }
+  function closeQuickExplore(returnFocus = false) {
+    const menu = $('quick-explore-menu');
+    if (!menu || menu.hidden) return;
+    const button = document.querySelector('[data-quick-explore][aria-expanded="true"]');
+    menu.hidden = true;
+    menu.replaceChildren();
+    document.querySelectorAll('[data-quick-explore][aria-expanded="true"]')
+      .forEach(item => item.setAttribute('aria-expanded', 'false'));
+    if (returnFocus) button?.focus();
+  }
+  function openQuickExplore(button) {
+    const card = state.cards.find(item => item.collectionItemId === button.dataset.quickExplore);
+    if (!card) return;
+    closeQuickExplore();
+    const menu = ensureQuickExploreMenu();
+    menu.innerHTML = Explore.renderQuickMenu({
+      primaryName: cardTitle(card),
+      oraclePrimaryName: card.oracleName || card.name,
+      setCode: card.setCode,
+      collectorNumber: card.collectorNumber,
+      finish: card.foil,
+      scryfallUri: card.scryfallUri || card.scryfall_uri || ''
+    });
+    button.setAttribute('aria-expanded', 'true');
+    menu.hidden = false;
+    menu.style.visibility = 'hidden';
+    const rect = button.getBoundingClientRect();
+    const margin = 8;
+    const left = Math.max(margin, Math.min(innerWidth - menu.offsetWidth - margin, rect.right - menu.offsetWidth));
+    let top = rect.bottom + 6;
+    if (top + menu.offsetHeight > innerHeight - margin) top = Math.max(margin, rect.top - menu.offsetHeight - 6);
+    menu.style.left = `${left}px`;
+    menu.style.top = `${top}px`;
+    menu.style.visibility = '';
+    menu.querySelector('a')?.focus();
+  }
+  function selectedExportScope() {
+    return document.querySelector('[name="export-scope"]:checked')?.value || 'current';
+  }
+  function exportCardCount(cards) {
+    return cards.reduce((sum, card) => sum + Number(card.quantity || 0), 0);
+  }
+  function updateExportPanel() {
+    if (!$('export-current-count')) return;
+    const currentCount = exportCardCount(state.visible);
+    const libraryCount = exportCardCount(state.cards);
+    $('export-current-count').textContent = `— ${currentCount.toLocaleString()} cards`;
+    $('export-library-count').textContent = `— ${libraryCount.toLocaleString()} cards`;
+    const scope = selectedExportScope();
+    const count = scope === 'library' ? libraryCount : currentCount;
+    document.querySelectorAll('[data-export]').forEach(button => { button.disabled = count === 0; });
+    const sourceName = scope === 'library' ? (currentOwner ? 'library' : 'all collections') : 'filtered';
+    $('export-summary').textContent = count > 2000
+      ? `You are about to export ${count.toLocaleString()} collection cards from ${sourceName}.`
+      : `${count.toLocaleString()} ${sourceName} card${count === 1 ? '' : 's'} selected.`;
+  }
+  function currentExport() {
+    const scope = selectedExportScope();
+    const grouped = state.grouping !== 'printing';
+    const prepared = Export.prepareExport(state.visible, state.cards, { scope, grouped });
+    return { ...prepared, count: prepared.quantity };
+  }
+  function exportLabel() {
+    if (!currentOwner) return 'All Collections';
+    return state.owners.find(owner => owner.id === currentOwner)?.name || 'Collection';
+  }
+  function closeExportMenu() {
+    const menu = $('export-menu');
+    const toggle = $('export-toggle');
+    if (!menu || !toggle) return;
+    menu.hidden = true;
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+  function showExportToast(message, error = false) {
+    let toast = $('export-toast');
+    if (!toast) {
+      document.body.insertAdjacentHTML('beforeend', '<div id="export-toast" class="export-toast" role="status" aria-live="polite"></div>');
+      toast = $('export-toast');
+    }
+    toast.textContent = message;
+    toast.classList.toggle('error', error);
+    toast.classList.add('show');
+    clearTimeout(showExportToast.timer);
+    showExportToast.timer = setTimeout(() => toast.classList.remove('show'), 2200);
+    announce(message);
+  }
+  function downloadExport(value, extension, mime, message = 'Downloaded successfully.') {
+    const blob = new Blob([Export.utf8Bytes(value)], { type: mime });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = Export.filename(exportLabel(), extension);
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 0);
+    showExportToast(message);
+  }
+  async function runExport(action) {
+    const { scope, grouped, count, rows } = currentExport();
+    if (!rows.length) return;
+    const scopeDescription = scope === 'library'
+      ? (currentOwner ? 'library cards' : 'cards from all collections')
+      : 'filtered cards';
+    const success = verb => `${count.toLocaleString()} ${scopeDescription} ${verb}.`;
+    try {
+      if (action === 'copy') {
+        await Export.copyText(Export.formatTxt(rows, { includeOwner: !currentOwner }));
+        showExportToast(success('copied'));
+      } else if (action === 'names') {
+        await Export.copyText(Export.formatNames(rows, { grouped }));
+        showExportToast(success('copied'));
+      } else if (action === 'moxfield') {
+        await Export.copyText(Export.formatMoxfield(rows, { aggregate: grouped }));
+        showExportToast(success('copied'));
+      } else if (action === 'txt') {
+        downloadExport(Export.formatTxt(rows, { includeOwner: !currentOwner }), 'txt', 'text/plain;charset=utf-8', success('downloaded'));
+      } else if (action === 'csv') {
+        downloadExport(Export.formatCsv(rows), 'csv', 'text/csv;charset=utf-8', success('downloaded'));
+      } else if (action === 'arena') {
+        downloadExport(Export.formatArena(rows, { aggregate: grouped }), 'txt', 'text/plain;charset=utf-8', success('downloaded'));
+      }
+    } catch (_) {
+      showExportToast('Unable to access clipboard.', true);
+    } finally {
+      closeExportMenu();
+    }
+  }
   async function enrichMetadata() {
     const ids = [...new Set(state.cards.map(card => card.scryfallId).filter(Boolean))];
     if (!ids.length) return;
@@ -409,6 +574,14 @@
     $('search').addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(applyFilters, 80); });
     $('creature-type-filter').addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(applyFilters, 120); });
     $('filters').addEventListener('change', applyFilters);
+    document.querySelector('[data-colour-select-all]').addEventListener('click', () => {
+      document.querySelectorAll('[name="color"]').forEach(control => { control.checked = true; });
+      applyFilters();
+    });
+    document.querySelector('[data-colour-clear]').addEventListener('click', () => {
+      document.querySelectorAll('[name="color"]').forEach(control => { control.checked = false; });
+      applyFilters();
+    });
     $('sort').addEventListener('change', applyFilters);
     $('clear-all').addEventListener('click', clearFilters);
     $('filter-toggle').addEventListener('click', () => {
@@ -416,20 +589,66 @@
       $('filter-toggle').setAttribute('aria-expanded', open);
       if (open) $('filters').querySelector('input, select, button')?.focus();
     });
-    $('view-grid').addEventListener('click', () => { state.mode='grid'; localStorage.setItem('mtg-group-view','grid'); renderResults(); });
-    $('view-list').addEventListener('click', () => { state.mode='list'; localStorage.setItem('mtg-group-view','list'); renderResults(); });
+    $('view-grid').addEventListener('click', () => { closeQuickExplore(); state.mode='grid'; localStorage.setItem('mtg-group-view','grid'); renderResults(); });
+    $('view-list').addEventListener('click', () => { closeQuickExplore(); state.mode='list'; localStorage.setItem('mtg-group-view','list'); renderResults(); });
     $('grouping').addEventListener('change', event => {
       state.grouping=event.target.value;
       localStorage.setItem('mtg-grouping-v2',state.grouping);
       applyFilters();
     });
+    $('export-toggle').addEventListener('click', event => {
+      event.stopPropagation();
+      const menu = $('export-menu');
+      menu.hidden = !menu.hidden;
+      $('export-toggle').setAttribute('aria-expanded', String(!menu.hidden));
+      if (!menu.hidden) {
+        updateExportPanel();
+        menu.querySelector('[name="export-scope"]:checked')?.focus();
+      }
+    });
+    document.querySelectorAll('[name="export-scope"]').forEach(control => {
+      const remembered = sessionStorage.getItem(exportScopeKey);
+      control.checked = control.value === (remembered === 'library' ? 'library' : 'current');
+      control.addEventListener('change', () => {
+        sessionStorage.setItem(exportScopeKey, selectedExportScope());
+        updateExportPanel();
+      });
+    });
+    $('export-menu').addEventListener('click', event => {
+      const button = event.target.closest('[data-export]');
+      if (button && !button.disabled) runExport(button.dataset.export);
+    });
     $('load-more').addEventListener('click', () => { state.shown += state.pageSize; renderResults(); });
     document.addEventListener('click', event => {
+      const quickExplore = event.target.closest('[data-quick-explore]');
+      if (quickExplore) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (quickExplore.getAttribute('aria-expanded') === 'true') closeQuickExplore(true);
+        else openQuickExplore(quickExplore);
+        return;
+      }
+      if (event.target.closest('#quick-explore-menu a')) {
+        closeQuickExplore();
+        return;
+      }
+      if (!event.target.closest('#quick-explore-menu')) closeQuickExplore();
+      if (!event.target.closest('.export-control')) closeExportMenu();
       if (event.target.closest('[data-clear]')) clearFilters();
       const remove = event.target.closest('[data-remove-filter]');
       if (remove) removeFilter(remove.dataset.removeFilter, remove.dataset.removeValue);
     });
     document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !$('quick-explore-menu')?.hidden) {
+        event.preventDefault();
+        closeQuickExplore(true);
+        return;
+      }
+      if (event.key === 'Escape' && !$('export-menu').hidden) {
+        closeExportMenu();
+        $('export-toggle').focus();
+        return;
+      }
       if (!document.body.classList.contains('filters-open')) return;
       if (event.key === 'Escape') {
         document.body.classList.remove('filters-open');
