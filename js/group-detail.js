@@ -1,5 +1,6 @@
 (async function () {
   const Core = window.MTGCollectionCore;
+  const Explore = window.MTGExploreLinks;
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[char]));
   const query = new URLSearchParams(location.search);
@@ -70,13 +71,14 @@
   const legalities = Object.entries(meta?.legalities || {}).filter(([, status]) => status !== 'not_legal');
   const primaryName = flavorName || faceData[0]?.name || name.split(' // ')[0];
   const oraclePrimaryName = faceData[0]?.name || oracleName.split(' // ')[0];
-  const cardSlug = oraclePrimaryName.toLowerCase().replace(/'/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  const mtgmateName = encodeURIComponent(primaryName.replaceAll(' ', '_'));
-  const mtgmateSet = encodeURIComponent((meta?.set || records[0]?.setCode || '').toUpperCase());
-  const mtgmateCollector = encodeURIComponent(meta?.collector_number || records[0]?.collectorNumber || '');
-  const mtgmateFinish = records.some(card => card.foil === 'etched') ? ':etched'
-    : records.some(card => card.foil === 'foil') ? ':foil' : '';
-  const mtgmateUrl = `https://www.mtgmate.com.au/cards/${mtgmateName}/${mtgmateSet}/${mtgmateCollector}${mtgmateFinish}`;
+  const detailExploreLinks = Explore.getExploreLinks({
+    primaryName, oraclePrimaryName,
+    setCode: meta?.set || records[0]?.setCode || '',
+    collectorNumber: meta?.collector_number || records[0]?.collectorNumber || '',
+    finish: records.some(card => card.foil === 'etched') ? 'etched'
+      : records.some(card => card.foil === 'foil') ? 'foil' : 'normal',
+    scryfallUri: meta?.scryfall_uri || `https://scryfall.com/search?q=${encodeURIComponent(primaryName)}`
+  }, ['scryfall', 'edhrec', 'combos', 'mtggoldfish', 'mtgmate', 'reddit']);
 
   document.title = `${name} — Arcane Archive`;
   $('detail-container').innerHTML = `
@@ -107,12 +109,7 @@
         <section class="external-links">
           <h2>Explore</h2>
           <div class="link-buttons">
-            <a href="${esc(meta?.scryfall_uri || `https://scryfall.com/search?q=${encodeURIComponent(primaryName)}`)}" target="_blank" rel="noopener" class="ext-btn scryfall">Scryfall</a>
-            <a href="https://edhrec.com/cards/${esc(cardSlug)}" target="_blank" rel="noopener" class="ext-btn edhrec">EDHRec</a>
-            <a href="https://commanderspellbook.com/search/?q=${encodeURIComponent(oraclePrimaryName)}" target="_blank" rel="noopener" class="ext-btn spellbook">Combos</a>
-            <a href="https://www.mtggoldfish.com/price/${encodeURIComponent((meta?.set || records[0]?.setCode || '').toUpperCase())}/${encodeURIComponent(oraclePrimaryName.replace(/'/g, ''))}" target="_blank" rel="noopener" class="ext-btn goldfish">MTGGoldfish</a>
-            <a href="${esc(mtgmateUrl)}" target="_blank" rel="noopener" class="ext-btn mtgmate">MTGmate</a>
-            <a href="https://www.reddit.com/r/magicTCG/search?q=${encodeURIComponent(primaryName)}&restrict_sr=1" target="_blank" rel="noopener" class="ext-btn reddit">Reddit</a>
+            ${detailExploreLinks.map(link => `<a href="${esc(link.url)}" target="_blank" rel="noopener" class="ext-btn ${link.id === 'combos' ? 'spellbook' : link.id === 'mtggoldfish' ? 'goldfish' : link.id}">${link.id === 'mtgmate' ? 'MTGmate' : esc(link.label)}</a>`).join('')}
           </div>
         </section>
         <section class="ownership-section"><h2>Who owns this card</h2>${records.map(card => {
