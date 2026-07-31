@@ -5,5 +5,6 @@
   {"id":"mitch","name":"Mitch’s Museum","shortName":"Mitch","file":"data/collections/mitch.csv","badgeClass":"owner-mitch"},
   {"id":"sam","name":"Sam’s Sanctuary","shortName":"Sam","file":"data/collections/sam.csv","badgeClass":"owner-sam"},
   {"id":"daniel","name":"Daniel’s Delights","shortName":"Daniel","file":"data/collections/daniel.csv","badgeClass":"owner-daniel"},
+  {"id":"harry","name":"Harry’s Haul","shortName":"Harry","file":"data/collections/harry.csv","badgeClass":"owner-harry"},
   {"id":"jcjc","name":"JCJC’s Jewels","shortName":"JCJC","file":"data/collections/jcjc.csv","badgeClass":"owner-jcjc"}
 ]
