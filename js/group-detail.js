@@ -69,16 +69,16 @@
   const finishes = [...new Set(records.map(card => card.foil).filter(Boolean))].join(', ') || 'Unknown';
   const conditions = [...new Set(records.map(card => card.condition).filter(Boolean))].map(value => value.replaceAll('_', ' ')).join(', ') || 'Unknown';
   const legalities = Object.entries(meta?.legalities || {}).filter(([, status]) => status !== 'not_legal');
-  const primaryName = flavorName || faceData[0]?.name || name.split(' // ')[0];
+  const primaryName = name;
   const oraclePrimaryName = faceData[0]?.name || oracleName.split(' // ')[0];
   const detailExploreLinks = Explore.getExploreLinks({
-    primaryName, oraclePrimaryName,
+    primaryName, oracleName, oraclePrimaryName, cardFaces: meta?.card_faces,
     setCode: meta?.set || records[0]?.setCode || '',
     collectorNumber: meta?.collector_number || records[0]?.collectorNumber || '',
     finish: records.some(card => card.foil === 'etched') ? 'etched'
       : records.some(card => card.foil === 'foil') ? 'foil' : 'normal',
     scryfallUri: meta?.scryfall_uri || `https://scryfall.com/search?q=${encodeURIComponent(primaryName)}`
-  }, ['scryfall', 'edhrec', 'combos', 'mtggoldfish', 'mtgmate', 'reddit']);
+  }, ['scryfall', 'edhrec', 'combos', 'mtggoldfish', 'mtgmate', 'reddit', 'ebay-au']);
 
   document.title = `${name} — Arcane Archive`;
   $('detail-container').innerHTML = `
@@ -109,7 +109,7 @@
         <section class="external-links">
           <h2>Explore</h2>
           <div class="link-buttons">
-            ${detailExploreLinks.map(link => `<a href="${esc(link.url)}" target="_blank" rel="noopener" class="ext-btn ${link.id === 'combos' ? 'spellbook' : link.id === 'mtggoldfish' ? 'goldfish' : link.id}">${link.id === 'mtgmate' ? 'MTGmate' : esc(link.label)}</a>`).join('')}
+            ${detailExploreLinks.map(link => `<a href="${esc(link.url)}" target="_blank" rel="noopener noreferrer" class="ext-btn ${link.id === 'combos' ? 'spellbook' : link.id === 'mtggoldfish' ? 'goldfish' : link.id}">${link.id === 'mtgmate' ? 'MTGmate' : esc(link.label)}</a>`).join('')}
           </div>
         </section>
         <section class="ownership-section"><h2>Who owns this card</h2>${records.map(card => {

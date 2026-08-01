@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const core = require('../js/collection-core.js');
 const collectionExport = require('../js/collection-export.js');
 const exploreLinks = require('../js/explore-links.js');
+const preconMerge = require('../scripts/merge-precon-collection.js');
 const fs = require('node:fs');
 
 const csv = `Binder Name,Binder Type,Name,Set code,Set name,Collector number,Foil,Rarity,Quantity,ManaBox ID,Scryfall ID,Purchase price,Condition,Language,Purchase price currency,Added date
@@ -251,7 +252,7 @@ test('MTGMate uses canonical names for alternate-name printings and preserves pr
   assert.equal(normal.url, 'https://www.mtgmate.com.au/cards/Sword_of_Fire_and_Ice/MAR/100');
 });
 
-test('MTGMate keeps existing normal links and safely falls back to the displayed name', () => {
+test('MTGMate keeps existing normal links, handles punctuation and falls back safely', () => {
   const normal = exploreLinks.getExploreLinks({
     name: 'Sol Ring',
     set: 'cmm',
@@ -266,7 +267,25 @@ test('MTGMate keeps existing normal links and safely falls back to the displayed
   }).find(link => link.id === 'mtgmate');
 
   assert.equal(normal.url, 'https://www.mtgmate.com.au/cards/Sol_Ring/CMM/396');
-  assert.equal(punctuation.url, "https://www.mtgmate.com.au/cards/Kaya's_Guile/MH1/205");
+  const fallback = exploreLinks.getExploreLinks({ primaryName: 'Unknown Card' }, ['mtgmate'])[0];
+  assert.equal(punctuation.url, 'https://www.mtgmate.com.au/cards/Kayas_Guile/MH1/205');
+  assert.equal(fallback.url, 'https://www.mtgmate.com.au/cards/Unknown%20Card');
+});
+
+test('MTGMate preserves full double-faced canonical names for normal and foil cards', () => {
+  const tony = {
+    primaryName: 'Tony Stark', oracleName: 'Tony Stark // The Invincible Iron Man',
+    setCode: 'MSH', collectorNumber: '392', finish: 'foil'
+  };
+  const tchalla = {
+    primaryName: "T'Challa", setCode: 'MSH', collectorNumber: '410', finish: 'normal',
+    cardFaces: [{ name: "T'Challa" }, { name: 'Black Panther' }]
+  };
+  const tonyUrl = exploreLinks.getExploreLinks(tony, ['mtgmate'])[0].url;
+  const tchallaUrl = exploreLinks.getExploreLinks(tchalla, ['mtgmate'])[0].url;
+  assert.equal(tonyUrl, 'https://www.mtgmate.com.au/cards/Tony_Stark_//_The_Invincible_Iron_Man/MSH/392:foil');
+  assert.equal(tchallaUrl, 'https://www.mtgmate.com.au/cards/TChalla_//_Black_Panther/MSH/410');
+  assert.match(tonyUrl, /Tony_Stark_\/\/_The_Invincible_Iron_Man/);
 });
 
 test('detail and Quick Explore share the same canonical MTGMate URL', () => {
@@ -323,8 +342,14 @@ test('existing card-detail Explore section remains and uses shared URLs', () => 
   assert.match(html, /js\/explore-links\.js/);
   assert.match(source, /<h2>Explore<\/h2>/);
   assert.match(source, /Explore\.getExploreLinks/);
-  assert.match(source, /\['scryfall', 'edhrec', 'combos', 'mtggoldfish', 'mtgmate', 'reddit'\]/);
-  assert.doesNotMatch(source, /\['scryfall'.*'ebay-au'/);
+  assert.match(source, /\['scryfall', 'edhrec', 'combos', 'mtggoldfish', 'mtgmate', 'reddit', 'ebay-au'\]/);
+  assert.match(source, /rel="noopener noreferrer"/);
+  assert.match(source, /const primaryName = name;/);
+  const card = { primaryName: 'The Soul Stone' };
+  const quickEbay = exploreLinks.getExploreLinks(card).find(link => link.id === 'ebay-au');
+  const detailEbay = exploreLinks.getExploreLinks(card, ['ebay-au'])[0];
+  assert.equal(detailEbay.url, quickEbay.url);
+  assert.equal(detailEbay.url, 'https://www.ebay.com.au/sch/i.html?_nkw=The%20Soul%20Stone');
 });
 
 test('Quick Explore trigger preserves the original card flow and uses a list action column', () => {
@@ -492,4 +517,48 @@ test('Scryfall session cache expires after one hour', () => {
   core.cacheScryfallCards([{ id: 'card-1', name: 'Cached Card', prices: { usd: '1.00' } }], storage, now);
   assert.equal(core.readCachedScryfall(['card-1'], storage, now + 3_599_999)['card-1'].name, 'Cached Card');
   assert.deepEqual(core.readCachedScryfall(['card-1'], storage, now + 3_600_000), {});
+});
+
+test('replacement Monty and Edward collection CSVs load with correct owner metadata', () => {
+  const owners = {
+    monty: { id:'monty', name:'Monty’s Manor', shortName:'Monty', badgeClass:'owner-monty' },
+    edward: { id:'edward', name:'Edward’s Exhibit', shortName:'Edward', badgeClass:'owner-edward' }
+  };
+  for (const id of Object.keys(owners)) {
+    const parsed = core.parseManaBoxCSV(fs.readFileSync(require.resolve(`../data/collections/${id}.csv`), 'utf8'));
+    assert.deepEqual(parsed.errors, []);
+    assert.ok(parsed.cards.length > 0);
+    const owned = core.applyOwnerMetadata(parsed.cards, owners[id]);
+    assert.equal(owned[0].ownerId, id);
+    assert.equal(owned[0].ownerName, owners[id].name);
+  }
+});
+
+test('Edward precon binders contain exactly 100 physical cards with complete IDs', () => {
+  const parsed = core.parseManaBoxCSV(fs.readFileSync(require.resolve('../data/collections/edward.csv'), 'utf8'));
+  for (const binder of ['Riders of Rohan', 'Elven Council']) {
+    const cards = parsed.cards.filter(card => card.binderName === binder);
+    assert.equal(cards.reduce((sum, card) => sum + card.quantity, 0), 100);
+    assert.equal(cards.some(card => !card.scryfallId), false);
+  }
+  assert.equal(parsed.cards.some(card => card.binderName === 'Eleven Council'), false);
+});
+
+test('precon merge consumes unassigned copies and keeps identical cards in separate binders', () => {
+  const source = 'Name,Set code,Set name,Collector number,Foil,Rarity,Quantity,Scryfall ID,Condition,Language,Purchase price currency\nSol Ring,LTC,Tales of Middle-earth Commander,284,normal,uncommon,1,sf-sol,near_mint,en,AUD\n';
+  const card = { quantity:1, name:'Sol Ring', setCode:'LTC', collectorNumber:'284', finish:'normal', language:'en' };
+  const meta = { [preconMerge.printingKey(card)]: { id:'sf-sol', set_name:'Tales of Middle-earth Commander', rarity:'uncommon' } };
+  const result = preconMerge.mergePrecons(source, [
+    { binderName:'Riders of Rohan', cards:[card] },
+    { binderName:'Elven Council', cards:[card] }
+  ], meta);
+  const parsed = core.parseManaBoxCSV(result.csv);
+  assert.equal(parsed.cards.reduce((sum, item) => sum + item.quantity, 0), 2);
+  assert.deepEqual(parsed.cards.map(item => item.binderName).sort(), ['Elven Council','Riders of Rohan']);
+  assert.equal(parsed.warnings.some(warning => /duplicate row/i.test(warning)), false);
+});
+
+test('precon import rejects malformed deck lists and empty collection CSVs clearly', () => {
+  assert.throws(() => preconMerge.parsePreconList('not a deck line'), /Invalid deck-list line 1/);
+  assert.throws(() => preconMerge.csvObjects(''), /collection CSV is empty/i);
 });
