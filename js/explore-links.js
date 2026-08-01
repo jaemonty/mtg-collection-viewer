@@ -7,18 +7,38 @@
   const slug = value => text(value).toLowerCase().replace(/'/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
+  function cardFaceNames(card = {}) {
+    const scryfall = card.scryfall || card.scryfallCard || {};
+    const faces = card.cardFaces || card.card_faces || scryfall.cardFaces || scryfall.card_faces;
+    if (!Array.isArray(faces) || faces.length < 2) return '';
+    const names = faces.map(face => text(face?.name).trim()).filter(Boolean);
+    return names.length > 1 ? names.join(' // ') : '';
+  }
+
   function getCanonicalCardName(card = {}) {
     const scryfall = card.scryfall || card.scryfallCard || {};
+    const candidates = [card.oracleName, card.canonicalName, card.originalName,
+      scryfall.name, scryfall.oracleName, scryfall.canonicalName, scryfall.originalName,
+      card.name, card.oraclePrimaryName];
+    const fullName = candidates.map(value => text(value).trim()).find(value => value.includes(' // '));
+    if (fullName) return fullName;
+    const facesName = cardFaceNames(card);
+    if (facesName) return facesName;
     const candidate = card.oracleName || card.canonicalName || card.originalName ||
-      card.oraclePrimaryName || scryfall.oracleName || scryfall.canonicalName ||
-      scryfall.originalName || scryfall.name || card.name || card.primaryName ||
+      scryfall.name || scryfall.oracleName || scryfall.canonicalName ||
+      scryfall.originalName || card.name || card.oraclePrimaryName || card.primaryName ||
       card.displayName || card.flavorName;
     return text(candidate).trim() || text(card.name || card.primaryName).trim();
   }
 
+  function mtgMateFaceSlug(value) {
+    return encodeURIComponent(text(value).trim()
+      .replace(/['’ʼ]/g, '')
+      .replace(/\s+/g, '_'));
+  }
+
   function mtgMateSlug(value) {
-    const frontName = text(value).split(/\s+\/\/\s+/)[0].trim();
-    return encodeURIComponent(frontName.replace(/\s+/g, '_'));
+    return text(value).split(/\s*\/\/\s*/).map(mtgMateFaceSlug).filter(Boolean).join('_//_');
   }
 
   function normalizeCard(card = {}) {
@@ -61,6 +81,9 @@
       getUrl: card => {
         const finishName = text(card.finish).toLowerCase();
         const finish = finishName === 'etched' ? ':etched' : finishName === 'foil' ? ':foil' : '';
+        if (!card.canonicalName || !card.setCode || !card.collectorNumber) {
+          return `https://www.mtgmate.com.au/cards/${encodeURIComponent(card.primaryName)}`;
+        }
         return `https://www.mtgmate.com.au/cards/${mtgMateSlug(card.canonicalName)}/${encodeURIComponent(card.setCode)}/${encodeURIComponent(card.collectorNumber)}${finish}`;
       }
     },
@@ -99,7 +122,7 @@
   }
 
   return {
-    exploreDestinations, normalizeCard, getCanonicalCardName, mtgMateSlug,
+    exploreDestinations, normalizeCard, getCanonicalCardName, mtgMateFaceSlug, mtgMateSlug,
     getExploreLinks, renderQuickMenu, renderQuickButton, slug
   };
 });

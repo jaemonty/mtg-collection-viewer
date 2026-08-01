@@ -420,7 +420,8 @@
     const menu = ensureQuickExploreMenu();
     menu.innerHTML = Explore.renderQuickMenu({
       primaryName: cardTitle(card),
-      oraclePrimaryName: card.oracleName || card.name,
+      oracleName: card.oracleName || card.name,
+      cardFaces: card.cardFaces || card.card_faces,
       setCode: card.setCode,
       collectorNumber: card.collectorNumber,
       finish: card.foil,
@@ -540,7 +541,7 @@
       type_line:meta.type_line, oracle_text:meta.oracle_text || meta.card_faces?.map(face=>face.oracle_text).join(' ') || '',
       colors:meta.colors || meta.card_faces?.[0]?.colors || [], color_identity:meta.color_identity || [],
       keywords:meta.keywords || [], legalities:meta.legalities || {}, imageUri:meta.image_uris?.normal || meta.card_faces?.[0]?.image_uris?.normal || '',
-      scryfallPrices:meta.prices || {}
+      cardFaces:meta.card_faces || [], scryfallPrices:meta.prices || {}
     }));
     const cached = Core.readCachedScryfall(ids);
     Object.values(cached).forEach(applyMeta);
